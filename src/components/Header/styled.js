@@ -4,12 +4,15 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 19px 0;
 `;
 
 export const Logo = styled.p`
   color: ${({ theme }) => theme.colors.black};
   font-size: 28px;
   font-weight: 600;
+  margin: 0;
+  display: flex;
 `;
 
 export const Navigation = styled.div`
@@ -56,19 +59,40 @@ export const Option = styled.a`
 `;
 
 export const Button = styled.button`
-  display: inline-flex;
-  padding: 12px 36px;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
+  padding: 16px 20px;
   border-radius: 20px 0px;
   background: ${({ theme }) => theme.colors.endeavour};
+  color: ${({ theme }) => theme.colors.white};
+  font-size: 24px;
+  font-weight: 600;
   border: none;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
 
-  &:hover {
-    background: ${({ theme }) => theme.colors.sanMarino};
-    transition: 0.3s;
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    color: ${({ theme }) => theme.colors.white};
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: ${({ theme }) => theme.colors.sanMarino};
+    transition: width 0.5s ease, background 0.3s ease;
+    z-index: 0;
+  }
+
+  &:hover::before {
+    width: 100%;
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.sanMarino};
   }
 `;
 
@@ -76,5 +100,11 @@ export const Text = styled.p`
   color: ${({ theme }) => theme.colors.white};
   font-size: 24px;
   font-weight: 500;
+  margin: 0;
+`;
+
+export const Image = styled.img`
+  width: 60px;
+  height: 60px;
   margin: 0;
 `;
