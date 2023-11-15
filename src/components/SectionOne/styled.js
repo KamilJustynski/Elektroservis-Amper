@@ -19,6 +19,21 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.black};
   font-size: 48px;
   font-weight: 600;
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  margin-top: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background-color: ${({ theme }) => theme.colors.orange};
+    transform: translateX(-50%);
+  }
 `;
 
 export const Description = styled.article`
@@ -42,6 +57,34 @@ export const Services = styled.button`
   font-size: 24px;
   font-weight: 600;
   border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    color: ${({ theme }) => theme.colors.white};
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: ${({ theme }) => theme.colors.burntUmber};
+    transition: width 0.5s ease, background 0.3s ease;
+    z-index: 0;
+  }
+
+  &:hover::before {
+    width: 100%;
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.burntUmber};
+  }
 `;
 
 export const Contact = styled.p`
@@ -49,6 +92,23 @@ export const Contact = styled.p`
   font-size: 24px;
   font-weight: 600;
   text-decoration-line: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.burntUmber};
+    transition: 0.3s;
+  }
 `;
 
-export const ImageWrapper = styled.div``;
+export const ImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Image = styled.img`
+  width: 458px;
+  height: auto;
+  border-radius: 0px 20px;
+  box-shadow: 7px 7px 26px -9px #000000;
+`;

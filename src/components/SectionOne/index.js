@@ -7,7 +7,9 @@ import {
   Services,
   Contact,
   ImageWrapper,
+  Image,
 } from "./styled";
+import Picture from "./image.png";
 
 export const SectionOne = () => (
   <Container>
@@ -27,10 +29,14 @@ export const SectionOne = () => (
         <br /> systemów elektronicznych.
       </Description>
       <ServicesAndContact>
-        <Services>Nasze usługi</Services>
+        <Services>
+          <span>Nasze usługi</span>
+        </Services>
         <Contact>Skontaktuj się z nami</Contact>
       </ServicesAndContact>
     </DescriptionWrapper>
-    <ImageWrapper></ImageWrapper>
+    <ImageWrapper>
+      <Image src={Picture} alt="electrical box" />
+    </ImageWrapper>
   </Container>
 );
