@@ -19,7 +19,9 @@ export const Background = () => (
       <br /> pomiarów elektrycznych, instalacji elektrycznych, pomiary
       <br /> IT i instalacji IT.
     </SecondText>
-    <Button>Skontaktuj sie z nami</Button>
+    <Button>
+      <span>Skontaktuj sie z nami</span>
+    </Button>
     <Wrapper>
       <Ellipse />
       <Ellipse />
