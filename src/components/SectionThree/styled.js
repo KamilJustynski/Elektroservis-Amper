@@ -1,14 +1,18 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
-  align-items: center;
-  gap: 154px;
-  margin: 0 auto;
-  margin-right: 80px;
-  margin-left: 80px;
-  margin-bottom: 150px;
+  gap: 93px;
+  margin: 140px 100px;
+
+  ${({ center }) =>
+    center &&
+    css`
+      align-items: center;
+      margin: 140px 100px;
+    `}
 `;
 
 export const GridWrapper = styled.div`
@@ -16,7 +20,7 @@ export const GridWrapper = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   align-items: flex-start;
-  grid-gap: 36px;
+  grid-gap: 64px;
 `;
 
 export const GridItem = styled.div`
@@ -28,7 +32,7 @@ export const GridItem = styled.div`
 
 export const Title = styled.h2`
   color: ${({ theme }) => theme.colors.black};
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 600;
   margin: 0;
 `;
@@ -38,14 +42,14 @@ export const Description = styled.article`
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
-  height: auto;
   width: 281px;
+  height: auto;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 36px;
 `;
@@ -56,6 +60,7 @@ export const Name = styled.h1`
   font-weight: 600;
   position: relative;
   flex-shrink: 0;
+  margin: 0;
 
   &::after {
     content: "";
@@ -73,7 +78,6 @@ export const Article = styled.article`
   color: ${({ theme }) => theme.colors.black};
   font-size: 20px;
   line-height: 1.3;
-  max-width: 500px;
 `;
 
 export const Button = styled.button`
