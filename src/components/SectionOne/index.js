@@ -3,11 +3,11 @@ import {
   DescriptionWrapper,
   Title,
   Description,
-  ServicesAndContact,
   Services,
-  Contact,
   ImageWrapper,
   Image,
+  List,
+  ListItem,
 } from "./styled";
 import Picture from "./image.png";
 
@@ -16,24 +16,23 @@ export const SectionOne = () => (
     <DescriptionWrapper>
       <Title>O nas</Title>
       <Description>
-        Jesteśmy wiodącą firmą specjalizującą się w dziedzinie
-        <br /> pomiarów elektronicznych oraz pomiarów informatycznych (IT).
-        <br />
-        Nasza firma, założona w [rok założenia], zdobyła uznanie na
-        <br /> rynku dzięki profesjonalizmowi, zaawansowanej technologii oraz
-        <br />
-        pasji do innowacji. Naszym celem jest dostarczanie klientom
-        <br /> rozwiązań pomiarowych najwyższej jakości, które pozwalają na
-        <br />
-        optymalizację ich działań i zapewnienie niezawodności
-        <br /> systemów elektronicznych.
+        Jesteśmy firmą specjalizującą się w dziedzinach:
+        <List>
+          <ListItem>instalacji elektrycznych,</ListItem>
+          <ListItem>instalacji SAP, SSWIN, CCTV, KD, IT,</ListItem>
+          <ListItem>pomiary elektryczne,</ListItem>
+          <ListItem>pomiary sieci IT.</ListItem>
+        </List>
+        W wyżej wymienionych dziedzinach zajmujemy się rownież serwisem
+        pogwarancyjnym. Nasza firma zdobyła uznanie na rynku dzięki
+        profesjonalizmowi, doświadczeniu i zaawansowanej technologii oraz pasji
+        do innowacji. Naszym celem jest dostarczanie klientom rozwiązań i usług
+        wysokiej jakości, które pozwalają na optymalizację ich działań i
+        zapewnienie niezawodności wykonanych systemów.
       </Description>
-      <ServicesAndContact>
-        <Services>
-          <span>Nasze usługi</span>
-        </Services>
-        <Contact>Skontaktuj się z nami</Contact>
-      </ServicesAndContact>
+      <Services>
+        <span>Nasze usługi</span>
+      </Services>
     </DescriptionWrapper>
     <ImageWrapper>
       <Image src={Picture} alt="electrical box" />
