@@ -1,5 +1,7 @@
 import { Background } from "../components/Background";
+import { Customers } from "../components/Customers";
 import { Header } from "../components/Header";
+import { SectionFive } from "../components/SectionFive";
 import { SectionFour } from "../components/SectionFour";
 import { SectionOne } from "../components/SectionOne";
 import { SectionThree } from "../components/SectionThree";
@@ -14,6 +16,8 @@ function App() {
       <SectionTwo />
       <SectionThree />
       <SectionFour />
+      <SectionFive />
+      <Customers />
     </>
   );
 }
