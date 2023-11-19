@@ -64,12 +64,13 @@ export const Button = styled.button`
   background: ${({ theme }) => theme.colors.endeavour};
   color: ${({ theme }) => theme.colors.white};
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   border: none;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: background 0.3s ease;
+  font-style: italic;
 
   span {
     position: relative;
@@ -99,7 +100,7 @@ export const Button = styled.button`
 export const Text = styled.p`
   color: ${({ theme }) => theme.colors.white};
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0;
 `;
 

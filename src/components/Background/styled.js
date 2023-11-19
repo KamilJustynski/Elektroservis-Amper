@@ -22,6 +22,7 @@ export const MainText = styled.h1`
   font-size: 64px;
   font-weight: 600;
   margin: 0;
+  font-style: italic;
 `;
 
 export const SecondText = styled.h2`
@@ -37,12 +38,13 @@ export const Button = styled.button`
   background: ${({ theme }) => theme.colors.black};
   color: ${({ theme }) => theme.colors.white};
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   border: none;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: background 0.3s ease;
+  font-style: italic;
 
   span {
     position: relative;

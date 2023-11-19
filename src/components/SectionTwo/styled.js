@@ -23,9 +23,10 @@ export const GridItem = styled.div`
 export const Headline = styled.p`
   color: ${({ theme }) => theme.colors.black};
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 32px;
   position: relative;
+  font-style: italic;
 
   &::after {
     content: "";
@@ -42,7 +43,8 @@ export const Headline = styled.p`
 export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.black};
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 400;
+  font-style: italic;
   margin-bottom: 32px;
 `;
 

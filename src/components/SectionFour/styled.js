@@ -28,6 +28,7 @@ export const SectionTitle = styled.h1`
   margin: 0;
   margin-bottom: 72px;
   position: relative;
+  font-style: italic;
 
   &::after {
     content: "";

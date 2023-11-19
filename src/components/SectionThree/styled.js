@@ -57,7 +57,8 @@ export const Wrapper = styled.div`
 export const Name = styled.h1`
   color: ${({ theme }) => theme.colors.black};
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 400;
+  font-style: italic;
   position: relative;
   flex-shrink: 0;
   margin: 0;
@@ -86,12 +87,13 @@ export const Button = styled.button`
   background: ${({ theme }) => theme.colors.sunglow};
   color: ${({ theme }) => theme.colors.white};
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   border: none;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: background 0.3s ease;
+  font-style: italic;
 
   span {
     position: relative;

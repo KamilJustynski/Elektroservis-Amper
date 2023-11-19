@@ -18,9 +18,10 @@ export const DescriptionWrapper = styled.div`
 export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.black};
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
   display: inline-block;
+  font-style: italic;
   width: fit-content;
   margin-top: 0;
 
@@ -54,12 +55,13 @@ export const Services = styled.button`
   background: ${({ theme }) => theme.colors.orange};
   color: ${({ theme }) => theme.colors.white};
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   border: none;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: background 0.3s ease;
+  font-style: italic;
 
   span {
     position: relative;
