@@ -1,5 +1,7 @@
 import { Background } from "../components/Background";
+import { Contact } from "../components/Contact";
 import { Customers } from "../components/Customers";
+import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { SectionFive } from "../components/SectionFive";
 import { SectionFour } from "../components/SectionFour";
@@ -18,6 +20,8 @@ function App() {
       <SectionFour />
       <SectionFive />
       <Customers />
+      <Contact />
+      <Footer />
     </>
   );
 }
