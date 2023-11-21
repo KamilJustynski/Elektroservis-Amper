@@ -8,9 +8,6 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.p`
-  color: ${({ theme }) => theme.colors.black};
-  font-size: 28px;
-  font-weight: 600;
   margin: 0;
   display: flex;
 `;

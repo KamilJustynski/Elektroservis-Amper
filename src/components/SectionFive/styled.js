@@ -48,6 +48,19 @@ export const Title = styled.h1`
   font-size: 48px;
   font-weight: 400;
   margin: 0;
+  position: relative;
+  font-style: italic;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 12%;
+    bottom: -10px;
+    width: 108px;
+    height: 2px;
+    background-color: ${({ theme }) => theme.colors.white};
+    transform: translateX(-50%);
+  }
 `;
 
 export const Description = styled.article`
