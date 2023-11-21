@@ -7,7 +7,7 @@ import baydo from "./baydo.png";
 import energa from "./energa.png";
 import pks from "./pks.png";
 import telemax from "./telemax.png";
-import { CustomSlider } from "./styled";
+import { CustomSlider, Title } from "./styled";
 
 export const Customers = () => {
   const slider = useRef();
@@ -20,25 +20,28 @@ export const Customers = () => {
   };
 
   return (
-    <CustomSlider ref={slider} {...settings}>
-      <div>
-        <img src={agaex} />
-      </div>
-      <div>
-        <img src={artmir} />
-      </div>
-      <div>
-        <img src={baydo} />
-      </div>
-      <div>
-        <img src={energa} />
-      </div>
-      <div>
-        <img src={pks} />
-      </div>
-      <div>
-        <img src={telemax} />
-      </div>
-    </CustomSlider>
+    <>
+      <Title>Zaufali nam</Title>
+      <CustomSlider ref={slider} {...settings}>
+        <div>
+          <img src={agaex} alt="Agaex" />
+        </div>
+        <div>
+          <img src={artmir} alt="Artmir" />
+        </div>
+        <div>
+          <img src={baydo} alt="Baydo" />
+        </div>
+        <div>
+          <img src={energa} alt="Energa" />
+        </div>
+        <div>
+          <img src={pks} alt="PKS" />
+        </div>
+        <div>
+          <img src={telemax} alt="TELEMAX" />
+        </div>
+      </CustomSlider>
+    </>
   );
 };
