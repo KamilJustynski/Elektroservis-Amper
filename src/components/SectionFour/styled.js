@@ -8,9 +8,11 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 458px;
-  height: auto;
-  border-radius: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 458px;
+  border-radius: 0px 20px;
   box-shadow: -7px 7px 26px -9px ${({ theme }) => theme.colors.black};
 `;
 
