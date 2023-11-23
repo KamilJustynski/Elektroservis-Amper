@@ -6,60 +6,50 @@ import {
   Option,
   Contact,
   LogoContainer,
+  Wrapper,
   Image,
-} from "./styled";
-import {
   NumberAndTel,
   Tel,
-  Handset,
   Telephone,
   Mail,
-  Envelope,
   Email,
-} from "../Contact/styled";
+  Box,
+} from "./styled";
 import logo from "../Header/logo.png";
 
 export const Footer = () => (
   <Container>
-    <Menu>
-      <Title>Menu:</Title>
-      <Options>
-        <Option>O nas</Option>
-        <Option>Realizacje</Option>
-        <Option>Usługi</Option>
-      </Options>
-    </Menu>
-    <Contact>
-      <Title>Kontakt:</Title>
-      <NumberAndTel>
-        <Tel>
-          <Handset />
-          <Telephone white href="tel:+48509768781">
-            +48 509 768 781
-          </Telephone>
-        </Tel>
-        <Mail>
-          <Envelope />
-          <Email white href="mailto:amperowski64@wp.pl">
-            amperowski64@wp.pl
-          </Email>
-        </Mail>
-      </NumberAndTel>
-      <NumberAndTel>
-        <Tel>
-          <Handset />
-          <Telephone white href="tel:+48509768781">
-            +48 509 768 781
-          </Telephone>
-        </Tel>
-        <Mail>
-          <Envelope />
-          <Email white href="mailto:amperowski64@wp.pl">
-            amperowski64@wp.pl
-          </Email>
-        </Mail>
-      </NumberAndTel>
-    </Contact>
+    <Wrapper>
+      <Menu>
+        <Title>Menu:</Title>
+        <Options>
+          <Option>O nas</Option>
+          <Option>Realizacje</Option>
+          <Option>Usługi</Option>
+        </Options>
+      </Menu>
+      <Contact>
+        <Title>Kontakt:</Title>
+        <Box>
+          <NumberAndTel>
+            <Tel>
+              <Telephone href="tel:+48509768781">+48 509 768 781</Telephone>
+            </Tel>
+            <Mail>
+              <Email href="mailto:amperowski64@wp.pl">amperowski64@wp.pl</Email>
+            </Mail>
+          </NumberAndTel>
+          <NumberAndTel>
+            <Tel>
+              <Telephone href="tel:+48509768781">+48 509 768 781</Telephone>
+            </Tel>
+            <Mail>
+              <Email href="mailto:amperowski64@wp.pl">amperowski64@wp.pl</Email>
+            </Mail>
+          </NumberAndTel>
+        </Box>
+      </Contact>
+    </Wrapper>
     <LogoContainer>
       <Image src={logo} />
     </LogoContainer>
