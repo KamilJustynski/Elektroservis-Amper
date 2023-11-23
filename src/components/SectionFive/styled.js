@@ -41,6 +41,10 @@ export const WrapperFirst = styled.div`
   margin-left: 80px;
   margin-right: 80px;
   margin-bottom: 52px;
+
+  @media(max-width: 1200px) {
+    gap: 250px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -61,6 +65,21 @@ export const Title = styled.h1`
     background-color: ${({ theme }) => theme.colors.white};
     transform: translateX(-50%);
   }
+
+  @media(max-width: 1200px) {
+    font-size: 42px;
+
+    &::after {
+    content: "";
+    position: absolute;
+    left: 13%;
+    bottom: -10px;
+    width: 108px;
+    height: 2px;
+    background-color: ${({ theme }) => theme.colors.white};
+    transform: translateX(-50%);
+  }
+  }
 `;
 
 export const Description = styled.article`
@@ -68,6 +87,10 @@ export const Description = styled.article`
   font-size: 20px;
   font-weight: 400;
   margin: 0;
+
+  @media(max-width: 1200px) {
+    font-size: 16px;
+  }
 `;
 
 export const WrapperSecond = styled.div`
@@ -97,6 +120,10 @@ export const Service = styled.h2`
   font-size: 32px;
   font-weight: 600;
   margin: 0;
+
+  @media(max-width: 1200px) {
+    font-size: 28px;
+  }
 `;
 
 export const ShortDescription = styled.p`
@@ -105,6 +132,10 @@ export const ShortDescription = styled.p`
   font-weight: 400;
   line-height: 1.3;
   margin: 0;
+
+  @media(max-width: 1200px) {
+    font-size: 14px;
+  }
 `;
 
 export const More = styled.a`
@@ -114,4 +145,8 @@ export const More = styled.a`
   line-height: 1.3;
   text-decoration-line: underline;
   cursor: pointer;
+
+  @media(max-width: 1200px) {
+    font-size: 14px;
+  }
 `;
