@@ -7,6 +7,10 @@ export const Container = styled.div`
   align-items: center;
   row-gap: 199px;
   margin: 140px 100px;
+
+  @media(max-width: 1200px) {
+    margin: 140px 50px;
+  }
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -99,7 +103,7 @@ export const Image = styled.img`
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 458px;
+  max-width: 100%;
   border-radius: 0px 20px;
   box-shadow: 7px 7px 26px -9px ${({ theme }) => theme.colors.black};
 `;

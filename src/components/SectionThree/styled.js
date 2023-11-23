@@ -21,6 +21,10 @@ export const GridWrapper = styled.div`
   grid-template-rows: repeat(2, 1fr);
   align-items: flex-start;
   grid-gap: 64px;
+
+  @media(max-width: 1200px) {
+    grid-gap: 30px;
+  }
 `;
 
 export const GridItem = styled.div`
