@@ -10,6 +10,10 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   margin-left: 80px;
+
+  @media(max-width: 1200px) {
+    margin-left: 30px;
+  }
 `;
 
 export const GridItem = styled.div`
@@ -27,6 +31,10 @@ export const Headline = styled.p`
   margin-bottom: 32px;
   position: relative;
   font-style: italic;
+
+  @media(max-width: 1200px) {
+    font-size: 22px;
+  }
 
   &::after {
     content: "";
@@ -46,6 +54,10 @@ export const Title = styled.h1`
   font-weight: 400;
   font-style: italic;
   margin-bottom: 32px;
+
+  @media(max-width: 1200px) {
+    font-size: 42px;
+  }
 `;
 
 export const Description = styled.article`
@@ -55,10 +67,14 @@ export const Description = styled.article`
   line-height: 1.3;
   max-width: 574px;
   margin-bottom: 32px;
+  flex-shrink: 0;
+
+  @media(max-width: 1200px) {
+    font-size: 18px;
+  }
 `;
 
 export const Image = styled.img`
   width: 100%;
   height: 100%;
-  flex-shrink: 0;
 `;
