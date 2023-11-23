@@ -11,7 +11,7 @@ export const Image = styled.img`
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 458px;
+  max-width: 100%;
   border-radius: 0px 20px;
   box-shadow: -7px 7px 26px -9px ${({ theme }) => theme.colors.black};
 `;
