@@ -39,4 +39,18 @@ export const Title = styled.h1`
     background-color: ${({ theme }) => theme.colors.black};
     transform: translateX(-50%);
   }
+
+  @media(max-width: 1200px) {
+
+    &::after {
+      content: "";
+    position: absolute;
+    left: 5%;
+    bottom: -10px;
+    width: 108px;
+    height: 2px;
+    background-color: ${({ theme }) => theme.colors.black};
+    transform: translateX(-50%);
+  }
+  }
 `;
