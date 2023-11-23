@@ -77,7 +77,7 @@ const fadeInFromLeft = keyframes`
     width: 0;
   }
   to {
-    width: 100%;
+    width: 50%;
   }
 `;
 
@@ -87,12 +87,6 @@ export const Telephone = styled.a`
   font-weight: 400;
   text-decoration: none;
   position: relative;
-
-  ${({ white }) =>
-    white &&
-    css`
-      color: ${({ theme }) => theme.colors.white};
-    `}
 
   &:hover {
     color: ${({ theme }) => theme.colors.nero};
@@ -121,12 +115,6 @@ export const Email = styled.a`
   font-weight: 400;
   text-decoration: none;
   position: relative;
-  
-  ${({ white }) =>
-    white &&
-    css`
-      color: ${({ theme }) => theme.colors.white};
-    `}
 
   &:hover {
     color: ${({ theme }) => theme.colors.nero};
@@ -155,6 +143,7 @@ export const WrapperRight = styled.div`
   justify-content: flex-start;
   gap: 28px;
   margin-right: 80px;
+  max-width: 500px;
 `;
 
 export const YourEmail = styled.input`
@@ -172,16 +161,18 @@ export const Message = styled.input`
   border: 1px solid;
 
   &::placeholder {
-    text-align: left; /* Ustawienie tekstu na lewą stronę */
-    position: absolute; /* Ustawienie pozycji bezwzględnej */
-    top: 0; /* Umieszczenie tekstu na górze */
-    left: 0; /* Umieszczenie tekstu na lewej stronie */
-    padding: 8px; /* Dodanie odstępu wokół tekstu */
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px;
   }
 `;
 
 export const Button = styled.button`
   display: inline-block;
+  width: 108px;
+  height: 60px;
   padding: 16px 20px;
   border-radius: 20px 0px;
   background: ${({ theme }) => theme.colors.endeavour};
