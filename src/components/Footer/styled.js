@@ -66,6 +66,10 @@ export const Option = styled.a`
   &:hover::before {
     animation: ${fadeInFromLeft} 0.5s ease forwards;
   }
+
+  @media(max-width: 1200px) {
+    font-size: 20px;
+  }
 `;
 
 export const Contact = styled.div`
@@ -136,6 +140,10 @@ export const Telephone = styled.a`
   &:hover::before {
     animation: ${fadeInFromLeft} 0.5s ease forwards;
   }
+
+  @media(max-width: 1200px) {
+    font-size: 20px;
+  }
 `;
 
 export const Email = styled.a`
@@ -163,6 +171,10 @@ export const Email = styled.a`
 
   &:hover::before {
     animation: ${fadeInFromLeft} 0.5s ease forwards;
+  }
+
+  @media(max-width: 1200px) {
+    font-size: 20px;
   }
 `;
 

@@ -1,11 +1,14 @@
 import {
+  Wrapper,
+  SectionTitle,
+  Image,
+  ImageWrapper,
   Container,
   GridWrapper,
   GridItem,
   Title,
   Description,
-} from "../SectionThree/styled";
-import { Wrapper, SectionTitle, Image, ImageWrapper } from "./styled";
+} from "./styled";
 import Picture from "./image.png";
 
 export const SectionFour = () => (

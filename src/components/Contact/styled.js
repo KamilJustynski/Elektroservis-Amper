@@ -8,7 +8,7 @@ export const Container = styled.div`
   justify-content: center;
   gap: 200px;
   background-color: ${({ theme }) => theme.colors.solitude};
-  padding: 118px 0;
+  padding: 118px 80px;
 `;
 
 export const WrapperLeft = styled.div`
@@ -17,7 +17,6 @@ export const WrapperLeft = styled.div`
   flex-direction: column;
   gap: 64px;
   width: 100%;
-  margin-left: 80px;
 `;
 
 export const Title = styled.h1`
@@ -37,6 +36,21 @@ export const Title = styled.h1`
     height: 2px;
     background-color: ${({ theme }) => theme.colors.black};
     transform: translateX(-50%);
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 38px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 18%;
+      bottom: -10px;
+      width: 108px;
+      height: 2px;
+      background-color: ${({ theme }) => theme.colors.black};
+      transform: translateX(-50%);
+    }
   }
 `;
 
@@ -107,6 +121,10 @@ export const Telephone = styled.a`
   &:hover::before {
     animation: ${fadeInFromLeft} 0.5s ease forwards;
   }
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
 `;
 
 export const Email = styled.a`
@@ -135,6 +153,10 @@ export const Email = styled.a`
   &:hover::before {
     animation: ${fadeInFromLeft} 0.5s ease forwards;
   }
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
 `;
 
 export const WrapperRight = styled.div`
@@ -142,7 +164,6 @@ export const WrapperRight = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   gap: 28px;
-  margin-right: 80px;
   max-width: 500px;
 `;
 
@@ -152,6 +173,10 @@ export const YourEmail = styled.input`
   background-color: ${({ theme }) => theme.colors.solitude};
   border: none;
   border-bottom: solid 1px;
+
+  @media(max-width: 1200px) {
+    width: 350px;
+  }
 `;
 
 export const Message = styled.input`
@@ -166,6 +191,10 @@ export const Message = styled.input`
     top: 0;
     left: 0;
     padding: 8px;
+  }
+
+  @media(max-width: 1200px) {
+    width: 350px;
   }
 `;
 
@@ -185,6 +214,10 @@ export const Button = styled.button`
   overflow: hidden;
   transition: background 0.3s ease;
   font-style: italic;
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
 
   span {
     position: relative;

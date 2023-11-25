@@ -5,14 +5,17 @@ export const Container = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   margin: 0 auto;
-  margin-bottom: 180px;
 `;
 
 export const Wrapper = styled.div`
-  margin-left: 80px;
+  margin-left: 40px;
 
   @media(max-width: 1200px) {
     margin-left: 30px;
+  }
+
+  @media(max-width: 1000px) {
+    margin-left: 20px;
   }
 `;
 
@@ -32,10 +35,6 @@ export const Headline = styled.p`
   position: relative;
   font-style: italic;
 
-  @media(max-width: 1200px) {
-    font-size: 22px;
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -46,6 +45,27 @@ export const Headline = styled.p`
     background-color: ${({ theme }) => theme.colors.endeavour};
     transform: translateX(-50%);
   }
+
+  @media(max-width: 1200px) {
+    font-size: 22px;
+  }
+
+  @media(max-width: 1000px) {
+    font-size: 18px;
+
+    &::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    bottom: -10px;
+    width: 85px;
+    height: 2px;
+    background-color: ${({ theme }) => theme.colors.endeavour};
+    transform: translateX(-50%);
+  }
+  }
+
+ 
 `;
 
 export const Title = styled.h1`
@@ -56,7 +76,11 @@ export const Title = styled.h1`
   margin-bottom: 32px;
 
   @media(max-width: 1200px) {
-    font-size: 42px;
+    font-size: 38px;
+  }
+
+  @media(max-width: 1000px) {
+    font-size: 32px;
   }
 `;
 
@@ -70,7 +94,11 @@ export const Description = styled.article`
   flex-shrink: 0;
 
   @media(max-width: 1200px) {
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  @media(max-width: 1000px) {
+    font-size: 14px;
   }
 `;
 

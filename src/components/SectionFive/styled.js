@@ -67,12 +67,12 @@ export const Title = styled.h1`
   }
 
   @media(max-width: 1200px) {
-    font-size: 42px;
+    font-size: 38px;
 
     &::after {
     content: "";
     position: absolute;
-    left: 13%;
+    left: 14%;
     bottom: -10px;
     width: 108px;
     height: 2px;

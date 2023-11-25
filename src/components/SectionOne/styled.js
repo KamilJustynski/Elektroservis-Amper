@@ -5,11 +5,13 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  row-gap: 199px;
+  gap: 199px;
   margin: 140px 100px;
 
+
   @media(max-width: 1200px) {
-    margin: 140px 50px;
+    margin: 100px 50px;
+    gap: 100px;
   }
 `;
 
@@ -39,6 +41,14 @@ export const Title = styled.h1`
     background-color: ${({ theme }) => theme.colors.orange};
     transform: translateX(-50%);
   }
+  
+  @media(max-width: 1200px) {
+    font-size: 42px;
+  }
+
+  @media(max-width: 1200px) {
+    font-size: 38px;
+  }
 `;
 
 export const Description = styled.article`
@@ -47,6 +57,14 @@ export const Description = styled.article`
   font-size: 20px;
   font-weight: 400;
   line-height: 1.3;
+
+  @media(max-width: 1200px) {
+    font-size: 18px;
+  }
+
+  @media(max-width: 1200px) {
+    font-size: 16px;
+  }
 `;
 
 export const Services = styled.button`
@@ -90,6 +108,12 @@ export const Services = styled.button`
     color: ${({ theme }) => theme.colors.white};
     background-color: ${({ theme }) => theme.colors.burntUmber};
   }
+
+  @media(max-width: 1200px) {
+    font-size: 16px;
+    max-width: 150px;
+  }
+
 `;
 
 export const ImageWrapper = styled.div`

@@ -34,6 +34,10 @@ export const Option = styled.a`
   font-weight: 500;
   cursor: pointer;
 
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
+
   &:hover {
     color: ${({ theme }) => theme.colors.nero};
     transition: 0.3s;
@@ -69,6 +73,10 @@ export const Button = styled.button`
   transition: background 0.3s ease;
   font-style: italic;
 
+  @media (max-width: 1000px) {
+    padding: 12px 14px;
+  }
+
   span {
     position: relative;
     z-index: 1;
@@ -99,6 +107,10 @@ export const Text = styled.p`
   font-size: 24px;
   font-weight: 400;
   margin: 0;
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
 `;
 
 export const Image = styled.img`
