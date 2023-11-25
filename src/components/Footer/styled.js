@@ -14,6 +14,14 @@ export const Container = styled.div`
   justify-content: space-between;
   background: ${({ theme }) => theme.colors.black};
   padding: 83px 80px;
+
+  @media (max-width: 1000px) {
+    padding: 100px 80px;
+  }
+
+  @media (max-width: 850px) {
+    padding: 50px 80px;
+  }
 `;
 
 export const Menu = styled.div`
@@ -28,6 +36,14 @@ export const Title = styled.h1`
   font-weight: 400;
   margin: 0;
   padding-bottom: 39px;
+
+  @media (max-width: 850px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 660px) {
+    font-size: 20px;
+  }
 `;
 
 export const Options = styled.div`
@@ -67,8 +83,16 @@ export const Option = styled.a`
     animation: ${fadeInFromLeft} 0.5s ease forwards;
   }
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 20px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 660px) {
+    font-size: 12px;
   }
 `;
 
@@ -86,6 +110,15 @@ export const LogoContainer = styled.div`
 export const Image = styled.img`
   width: 100px;
   height: 100px;
+
+  @media (max-width: 850px) {
+    width: 80px;
+    height: 80px;
+  }
+  @media (max-width: 660px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -93,6 +126,14 @@ export const Wrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   gap: 124px;
+
+  @media (max-width: 850px) {
+    gap: 80px;
+  }
+
+  @media (max-width: 660px) {
+    gap: 40px;
+  }
 `;
 
 export const NumberAndTel = styled.div`
@@ -141,8 +182,16 @@ export const Telephone = styled.a`
     animation: ${fadeInFromLeft} 0.5s ease forwards;
   }
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 20px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 660px) {
+    font-size: 12px;
   }
 `;
 
@@ -173,8 +222,16 @@ export const Email = styled.a`
     animation: ${fadeInFromLeft} 0.5s ease forwards;
   }
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 20px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 660px) {
+    font-size: 12px;
   }
 `;
 

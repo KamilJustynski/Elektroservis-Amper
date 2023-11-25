@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { ReactComponent as handset } from "./handset.svg";
 import { ReactComponent as envelope } from "./envelope.svg";
 
@@ -6,9 +6,23 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 200px;
+  gap: 150px;
   background-color: ${({ theme }) => theme.colors.solitude};
   padding: 118px 80px;
+
+  @media (max-width: 1200px) {
+    gap: 100px;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 100px 80px;
+  }
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+    padding: 50px 50px;
+    gap: 50px;
+  }
 `;
 
 export const WrapperLeft = styled.div`
@@ -17,6 +31,12 @@ export const WrapperLeft = styled.div`
   flex-direction: column;
   gap: 64px;
   width: 100%;
+
+  @media (max-width: 850px) {
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -60,6 +80,12 @@ export const NumberAndTel = styled.div`
   gap: 28px;
   flex-direction: column;
   width: 100%;
+
+  @media (max-width: 850px) {
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
 `;
 
 export const Tel = styled.div`
@@ -174,8 +200,16 @@ export const YourEmail = styled.input`
   border: none;
   border-bottom: solid 1px;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     width: 350px;
+  }
+
+  @media (max-width: 1000px) {
+    width: 300px;
+  }
+
+  @media (max-width: 850px) {
+    width: 450px;
   }
 `;
 
@@ -193,8 +227,15 @@ export const Message = styled.input`
     padding: 8px;
   }
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     width: 350px;
+  }
+
+  @media (max-width: 1000px) {
+    width: 300px;
+  }
+  @media (max-width: 850px) {
+    width: 450px;
   }
 `;
 
@@ -243,3 +284,4 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.colors.sanMarino};
   }
 `;
+

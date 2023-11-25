@@ -15,12 +15,16 @@ export const Container = styled.div`
     `}
 
   @media(max-width: 1200px) {
-    margin: 100px;
-    justify-content: center; /* Wyśrodkowanie na mniejszych ekranach */
+    margin: 100px 80px;
+    justify-content: center; 
   }
 
-  @media(max-width: 1000px) {
-    margin: 100px;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 850px) {
+    margin: 50px 80px;
     grid-template-columns: 1fr;
   }
 `;
@@ -33,9 +37,8 @@ export const ImageWrapper = styled.div`
   width: 100%;
 
   @media (max-width: 1000px) {
-    max-width: 100%; /* Dostosowanie szerokości dla mniejszych ekranów */
+    max-width: 100%; 
   }
-
 `;
 
 export const Image = styled.img`
@@ -71,9 +74,34 @@ export const SectionTitle = styled.h1`
     transform: translateX(-50%);
   }
 
-  @media (max-width: 1200px) {
-    margin-bottom: 40px;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+`;
+
+export const SectionTitleMobile = styled.h1`
+  display: none;
+  color: ${({ theme }) => theme.colors.black};
+  font-size: 48px;
+  font-weight: 400;
+  margin: 0;
+  position: relative;
+  font-style: italic;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 13%;
+    bottom: -10px;
+    width: 108px;
+    height: 2px;
+    background-color: ${({ theme }) => theme.colors.orange};
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 1000px) {
     font-size: 38px;
+    display: flex;
   }
 `;
 

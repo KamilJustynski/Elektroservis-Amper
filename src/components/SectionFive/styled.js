@@ -29,6 +29,15 @@ export const Container = styled.div`
     z-index: -1;
     filter: brightness(50%);
   }
+
+  @media(max-width: 850px) {
+    margin-bottom: 50px;
+  }
+
+  @media(max-width: 660px) {
+    height: auto;
+  }
+
 `;
 
 export const WrapperFirst = styled.div`
@@ -42,8 +51,16 @@ export const WrapperFirst = styled.div`
   margin-right: 80px;
   margin-bottom: 52px;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     gap: 250px;
+  }
+
+  @media (max-width: 850px) {
+    gap: 50px;
+  }
+
+  @media (max-width: 660px) {
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -66,19 +83,34 @@ export const Title = styled.h1`
     transform: translateX(-50%);
   }
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 38px;
 
     &::after {
-    content: "";
-    position: absolute;
-    left: 14%;
-    bottom: -10px;
-    width: 108px;
-    height: 2px;
-    background-color: ${({ theme }) => theme.colors.white};
-    transform: translateX(-50%);
+      content: "";
+      position: absolute;
+      left: 14%;
+      bottom: -10px;
+      width: 108px;
+      height: 2px;
+      background-color: ${({ theme }) => theme.colors.white};
+      transform: translateX(-50%);
+    }
   }
+
+  @media (max-width: 850px) {
+    font-size: 32px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 17%;
+      bottom: -10px;
+      width: 108px;
+      height: 2px;
+      background-color: ${({ theme }) => theme.colors.white};
+      transform: translateX(-50%);
+    }
   }
 `;
 
@@ -88,8 +120,12 @@ export const Description = styled.article`
   font-weight: 400;
   margin: 0;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 16px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 12px;
   }
 `;
 
@@ -101,6 +137,10 @@ export const WrapperSecond = styled.div`
   margin-left: 80px;
   margin-right: 80px;
   margin-bottom: 86px;
+
+  @media (max-width: 660px) {
+    flex-direction: column;
+  }
 `;
 
 export const Option = styled.div`
@@ -113,6 +153,11 @@ export const Option = styled.div`
 export const Design = styled(design)`
   width: 46px;
   height: auto;
+
+  @media (max-width: 850px) {
+    width: 36px;
+    height: auto;
+  }
 `;
 
 export const Service = styled.h2`
@@ -121,8 +166,12 @@ export const Service = styled.h2`
   font-weight: 600;
   margin: 0;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 28px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 20px;
   }
 `;
 
@@ -133,8 +182,12 @@ export const ShortDescription = styled.p`
   line-height: 1.3;
   margin: 0;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 14px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 12px;
   }
 `;
 
@@ -146,7 +199,11 @@ export const More = styled.a`
   text-decoration-line: underline;
   cursor: pointer;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 14px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 12px;
   }
 `;

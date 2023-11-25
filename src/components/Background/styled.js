@@ -23,6 +23,10 @@ export const MainText = styled.h1`
   font-weight: 600;
   margin: 0;
   font-style: italic;
+
+  @media (max-width: 850px) {
+    font-size: 48px;
+  }
 `;
 
 export const SecondText = styled.h2`
@@ -30,6 +34,10 @@ export const SecondText = styled.h2`
   text-align: center;
   font-size: 24px;
   font-weight: 400;
+
+  @media (max-width: 850px) {
+    font-size: 16px;
+  }
 `;
 
 export const Button = styled.button`
@@ -45,6 +53,10 @@ export const Button = styled.button`
   overflow: hidden;
   transition: background 0.3s ease;
   font-style: italic;
+
+  @media (max-width: 850px) {
+    font-size: 16px;
+  }
 
   span {
     position: relative;

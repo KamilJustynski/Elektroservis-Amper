@@ -1,10 +1,17 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
+import { ReactComponent as nav } from "./nav.svg";
 
 export const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 19px 0;
+
+  @media(max-width: 660px) {
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
 `;
 
 export const Logo = styled.p`
@@ -36,6 +43,14 @@ export const Option = styled.a`
 
   @media (max-width: 1200px) {
     font-size: 20px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 660px) {
+    display: none;
   }
 
   &:hover {
@@ -77,6 +92,16 @@ export const Button = styled.button`
     padding: 12px 14px;
   }
 
+  @media (max-width: 660px) {
+    padding: 10px 12px;
+
+    ${({ display }) =>
+      display &&
+      css`
+        display: none;
+      `}
+  }
+
   span {
     position: relative;
     z-index: 1;
@@ -111,10 +136,32 @@ export const Text = styled.p`
   @media (max-width: 1200px) {
     font-size: 16px;
   }
+
+  @media (max-width: 660px) {
+    font-size: 12px;
+  }
 `;
 
 export const Image = styled.img`
   width: 60px;
   height: 60px;
   margin: 0;
+`;
+
+export const NavLogo = styled(nav)`
+  width: 27px;
+  height: 27px;
+`;
+
+export const MobileNavigation = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  background: ${({theme}) => theme.colors.white};
+
+  @media(min-width: 660px) {
+    display: none;
+  }
 `;

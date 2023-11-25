@@ -8,11 +8,13 @@ import {
   GridItem,
   Title,
   Description,
+  SectionTitleMobile
 } from "./styled";
 import Picture from "./image.png";
 
 export const SectionFour = () => (
   <Container center>
+    <SectionTitleMobile>Serwis elektryczny</SectionTitleMobile>
     <ImageWrapper>
       <Image src={Picture} alt="Electrical box" />
     </ImageWrapper>

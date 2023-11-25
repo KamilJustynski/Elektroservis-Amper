@@ -7,15 +7,19 @@ export const CustomSlider = styled(Slider)`
   margin-bottom: 98px;
   height: 100px;
 
+  @media(max-width: 850px) {
+    margin-bottom: 50px;
+  }
+
   .slick-slide {
-    text-align: center; /* Wyśrodkowanie zawartości */
+    text-align: center; 
   }
 
   .slick-slide img {
     width: auto;
     height: auto;
-    display: inline-block; /* Zmiana na inline-block */
-    vertical-align: middle; /* Wyśrodkowanie pionowe */
+    display: inline-block;
+    vertical-align: middle; 
   }
 `;
 

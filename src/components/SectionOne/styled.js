@@ -8,10 +8,15 @@ export const Container = styled.div`
   gap: 199px;
   margin: 140px 100px;
 
-
-  @media(max-width: 1200px) {
-    margin: 100px 50px;
+  @media (max-width: 1200px) {
+    margin: 100px 80px;
     gap: 100px;
+  }
+
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr;
+    margin: 50px 80px;
+    gap: 70px;
   }
 `;
 
@@ -19,6 +24,11 @@ export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (max-width: 850px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Title = styled.h1`
@@ -41,12 +51,12 @@ export const Title = styled.h1`
     background-color: ${({ theme }) => theme.colors.orange};
     transform: translateX(-50%);
   }
-  
-  @media(max-width: 1200px) {
+
+  @media (max-width: 1200px) {
     font-size: 42px;
   }
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 38px;
   }
 `;
@@ -58,11 +68,11 @@ export const Description = styled.article`
   font-weight: 400;
   line-height: 1.3;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 18px;
   }
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1000px) {
     font-size: 16px;
   }
 `;
@@ -109,11 +119,10 @@ export const Services = styled.button`
     background-color: ${({ theme }) => theme.colors.burntUmber};
   }
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 16px;
     max-width: 150px;
   }
-
 `;
 
 export const ImageWrapper = styled.div`
@@ -121,6 +130,11 @@ export const ImageWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+
+  @media (max-width: 850px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Image = styled.img`
@@ -137,4 +151,3 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li``;
- 
