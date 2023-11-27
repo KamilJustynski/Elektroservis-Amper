@@ -6,20 +6,26 @@ export const Container = styled.div`
   grid-template-rows: repeat(2, 1fr);
   margin: 0 auto;
 
-  @media(max-width: 660px) {
-    grid-template-columns: 1fr;
+  @media (max-width: 660px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 `;
 
 export const Wrapper = styled.div`
   margin-left: 40px;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     margin-left: 30px;
   }
 
-  @media(max-width: 1000px) {
+  @media (max-width: 1000px) {
     margin-left: 20px;
+  }
+
+  @media (max-width: 660px) {
+    margin: 70px 30px;
   }
 `;
 
@@ -29,6 +35,18 @@ export const GridItem = styled.div`
   align-items: flex-start;
   justify-content: center;
   background: ${({ theme }) => theme.colors.solitude};
+
+  @media (max-width: 660px) {
+    align-items: center;
+
+    &:nth-child(2) {
+      order: 1;
+    }
+
+    &:nth-child(1) {
+      order: 2;
+    }
+  }
 `;
 
 export const Headline = styled.p`
@@ -50,56 +68,59 @@ export const Headline = styled.p`
     transform: translateX(-50%);
   }
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 22px;
   }
 
-  @media(max-width: 1000px) {
+  @media (max-width: 1000px) {
     font-size: 18px;
 
     &::after {
-    content: "";
-    position: absolute;
-    left: 10%;
-    bottom: -10px;
-    width: 85px;
-    height: 2px;
-    background-color: ${({ theme }) => theme.colors.endeavour};
-    transform: translateX(-50%);
-  }
+      content: "";
+      position: absolute;
+      left: 10%;
+      bottom: -10px;
+      width: 85px;
+      height: 2px;
+      background-color: ${({ theme }) => theme.colors.endeavour};
+      transform: translateX(-50%);
+    }
   }
 
-  @media(max-width: 850px) {
+  @media (max-width: 850px) {
     font-size: 14px;
     margin-bottom: 20px;
 
     &::after {
-    content: "";
-    position: absolute;
-    left: 11%;
-    bottom: -10px;
-    width: 85px;
-    height: 2px;
-    background-color: ${({ theme }) => theme.colors.endeavour};
-    transform: translateX(-50%);
-  }
+      content: "";
+      position: absolute;
+      left: 11%;
+      bottom: -10px;
+      width: 85px;
+      height: 2px;
+      background-color: ${({ theme }) => theme.colors.endeavour};
+      transform: translateX(-50%);
+    }
   }
 
-  @media(max-width: 660px) {
-    font-size: 10px;
+  @media (max-width: 660px) {
+    font-size: 20px;
 
     &::after {
-    content: "";
-    position: absolute;
-    left: 14%;
-    bottom: -10px;
-    width: 85px;
-    height: 1px;
-    background-color: ${({ theme }) => theme.colors.endeavour};
-    transform: translateX(-50%);
+      content: "";
+      position: absolute;
+      left: 14%;
+      bottom: -10px;
+      width: 85px;
+      height: 1px;
+      background-color: ${({ theme }) => theme.colors.endeavour};
+      transform: translateX(-50%);
+    }
   }
+
+  @media (max-width: 540px) {
+    font-size: 14px;
   }
- 
 `;
 
 export const Title = styled.h1`
@@ -109,22 +130,25 @@ export const Title = styled.h1`
   font-style: italic;
   margin-bottom: 32px;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 38px;
   }
 
-  @media(max-width: 1000px) {
+  @media (max-width: 1000px) {
     font-size: 32px;
   }
 
-  @media(max-width: 850px) {
+  @media (max-width: 850px) {
     font-size: 28px;
     margin-bottom: 20px;
   }
 
-  @media(max-width: 660px) {
-    font-size: 22px;
-    margin-bottom: 10px;
+  @media (max-width: 660px) {
+    font-size: 38px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 32px;
   }
 `;
 
@@ -137,21 +161,25 @@ export const Description = styled.article`
   margin-bottom: 32px;
   flex-shrink: 0;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     font-size: 16px;
   }
 
-  @media(max-width: 1000px) {
+  @media (max-width: 1000px) {
     font-size: 14px;
   }
 
-  @media(max-width: 850px) {
+  @media (max-width: 850px) {
     font-size: 12px;
     margin-bottom: 20px;
   }
 
-  @media(max-width: 660px) {
-    font-size: 10px;
+  @media (max-width: 660px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 14px;
   }
 `;
 

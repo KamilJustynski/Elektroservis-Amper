@@ -45,18 +45,18 @@ export const WrapperFirst = styled.div`
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  gap: 355px;
+  gap: 50px;
   margin-top: 86px;
   margin-left: 80px;
   margin-right: 80px;
   margin-bottom: 52px;
 
   @media (max-width: 1200px) {
-    gap: 250px;
+    gap: 30px;
   }
 
   @media (max-width: 850px) {
-    gap: 50px;
+    gap: 30px;
   }
 
   @media (max-width: 660px) {

@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
   padding: 19px 0;
 
-  @media(max-width: 660px) {
+  @media (max-width: 660px) {
     justify-content: space-between;
     margin-left: 80px;
     margin-right: 80px;
@@ -90,10 +90,6 @@ export const Button = styled.button`
 
   @media (max-width: 1000px) {
     padding: 12px 14px;
-  }
-
-  @media (max-width: 660px) {
-    padding: 10px 12px;
 
     ${({ display }) =>
       display &&
@@ -101,6 +97,7 @@ export const Button = styled.button`
         display: none;
       `}
   }
+
 
   span {
     position: relative;
@@ -138,6 +135,10 @@ export const Text = styled.p`
   }
 
   @media (max-width: 660px) {
+    font-size: 16px;
+  }
+
+  @media(max-width: 540px) {
     font-size: 12px;
   }
 `;
@@ -159,9 +160,9 @@ export const MobileNavigation = styled.button`
   justify-content: center;
   cursor: pointer;
   border: none;
-  background: ${({theme}) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.white};
 
-  @media(min-width: 660px) {
+  @media (min-width: 661px) {
     display: none;
   }
 `;

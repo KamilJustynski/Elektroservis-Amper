@@ -27,6 +27,10 @@ export const Container = styled.div`
     margin: 50px 80px;
     grid-template-columns: 1fr;
   }
+
+  @media (max-width: 540px) {
+    margin: 40px 40px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -103,6 +107,11 @@ export const SectionTitleMobile = styled.h1`
     font-size: 38px;
     display: flex;
   }
+
+  @media (max-width: 540px) {
+    font-size: 32px;
+  
+  }
 `;
 
 export const GridWrapper = styled.div`
@@ -135,6 +144,10 @@ export const Title = styled.h2`
   @media (max-width: 1200px) {
     font-size: 20px;
   }
+
+  @media (max-width: 540px) {
+    font-size: 16px;
+  }
 `;
 
 export const Description = styled.article`
@@ -147,5 +160,9 @@ export const Description = styled.article`
 
   @media (max-width: 1200px) {
     font-size: 14px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 12px;
   }
 `;

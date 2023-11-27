@@ -18,6 +18,10 @@ export const Container = styled.div`
     margin: 50px 80px;
     gap: 70px;
   }
+
+  @media (max-width: 540px) {
+    margin: 40px 40px;
+  }
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -27,7 +31,6 @@ export const DescriptionWrapper = styled.div`
 
   @media (max-width: 850px) {
     justify-content: center;
-    align-items: center;
   }
 `;
 
@@ -59,6 +62,10 @@ export const Title = styled.h1`
   @media (max-width: 1200px) {
     font-size: 38px;
   }
+
+  @media (max-width: 1200px) {
+    font-size: 32px;
+  }
 `;
 
 export const Description = styled.article`
@@ -74,6 +81,10 @@ export const Description = styled.article`
 
   @media (max-width: 1000px) {
     font-size: 16px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 14px;
   }
 `;
 
@@ -122,6 +133,11 @@ export const Services = styled.button`
   @media (max-width: 1200px) {
     font-size: 16px;
     max-width: 150px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 12px;
+    padding: 12px 14px;
   }
 `;
 

@@ -23,6 +23,10 @@ export const Container = styled.div`
     padding: 50px 50px;
     gap: 50px;
   }
+
+  @media (max-width: 540px) {
+    padding: 40px 40px;
+  }
 `;
 
 export const WrapperLeft = styled.div`
@@ -33,8 +37,6 @@ export const WrapperLeft = styled.div`
   width: 100%;
 
   @media (max-width: 850px) {
-    justify-content: center;
-    align-items: center;
     gap: 50px;
   }
 `;
@@ -71,6 +73,10 @@ export const Title = styled.h1`
       background-color: ${({ theme }) => theme.colors.black};
       transform: translateX(-50%);
     }
+  }
+
+  @media(max-width: 540px) {
+    font-size: 32px;
   }
 `;
 
@@ -211,6 +217,10 @@ export const YourEmail = styled.input`
   @media (max-width: 850px) {
     width: 450px;
   }
+
+  @media (max-width: 600px) {
+    width: 350px;
+  }
 `;
 
 export const Message = styled.input`
@@ -237,12 +247,15 @@ export const Message = styled.input`
   @media (max-width: 850px) {
     width: 450px;
   }
+
+  @media (max-width: 600px) {
+    width: 350px;
+  }
 `;
 
 export const Button = styled.button`
   display: inline-block;
   width: 108px;
-  height: 60px;
   padding: 16px 20px;
   border-radius: 20px 0px;
   background: ${({ theme }) => theme.colors.endeavour};
@@ -258,6 +271,10 @@ export const Button = styled.button`
 
   @media (max-width: 1200px) {
     font-size: 20px;
+  }
+
+  @media (max-width: 660px) {
+    padding: 12px 14px;
   }
 
   span {
@@ -284,4 +301,3 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.colors.sanMarino};
   }
 `;
-

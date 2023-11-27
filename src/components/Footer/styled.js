@@ -22,6 +22,10 @@ export const Container = styled.div`
   @media (max-width: 850px) {
     padding: 50px 80px;
   }
+
+  @media (max-width: 540px) {
+    padding: 40px 40px;
+  }
 `;
 
 export const Menu = styled.div`

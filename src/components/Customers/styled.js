@@ -58,4 +58,9 @@ export const Title = styled.h1`
     transform: translateX(-50%);
   }
   }
+
+  @media(max-width: 540px) {
+    font-size: 32px;
+    margin-left: 40px;
+  }
 `;

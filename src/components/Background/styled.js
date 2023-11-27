@@ -27,6 +27,10 @@ export const MainText = styled.h1`
   @media (max-width: 850px) {
     font-size: 48px;
   }
+
+  @media (max-width: 540px) {
+    font-size: 38px;
+  }
 `;
 
 export const SecondText = styled.h2`
@@ -37,6 +41,10 @@ export const SecondText = styled.h2`
 
   @media (max-width: 850px) {
     font-size: 16px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 14px;
   }
 `;
 
@@ -56,6 +64,10 @@ export const Button = styled.button`
 
   @media (max-width: 850px) {
     font-size: 16px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 12px;
   }
 
   span {
