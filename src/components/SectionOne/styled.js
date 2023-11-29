@@ -22,6 +22,10 @@ export const Container = styled.div`
   @media (max-width: 540px) {
     margin: 40px 40px;
   }
+
+  @media (max-width: 390px) {
+    margin: 40px 25px;
+  }
 `;
 
 export const DescriptionWrapper = styled.div`

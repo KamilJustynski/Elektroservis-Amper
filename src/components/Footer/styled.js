@@ -1,4 +1,6 @@
 import styled, { keyframes } from "styled-components";
+import { ReactComponent as facebook } from "./facebook.svg";
+import { ReactComponent as instagram } from "./instagram.svg";
 
 const fadeInFromLeft = keyframes`
   from {
@@ -24,13 +26,18 @@ export const Container = styled.div`
   }
 
   @media (max-width: 540px) {
-    padding: 40px 40px;
+    padding: 25px 25px;
+    align-items: center;
   }
 `;
 
 export const Menu = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 540px) {
+    display: none;
+  }
 `;
 
 export const Title = styled.h1`
@@ -104,6 +111,10 @@ export const Contact = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  @media (max-width: 540px) {
+    display: none;
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -243,4 +254,25 @@ export const Box = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+`;
+
+export const MobileFooter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+
+  @media(min-width: 541px) {
+    display: none;
+  }
+`;
+
+export const Facebook = styled(facebook)`
+  width: 32px;
+  height: 32px;
+`;
+
+export const Instagram = styled(instagram)`
+  width: 32px;
+  height: 32px;
 `;

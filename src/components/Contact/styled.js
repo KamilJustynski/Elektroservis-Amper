@@ -27,6 +27,10 @@ export const Container = styled.div`
   @media (max-width: 540px) {
     padding: 40px 40px;
   }
+
+  @media(max-width: 390px) {
+    padding: 40px 25px;
+  }
 `;
 
 export const WrapperLeft = styled.div`
@@ -75,7 +79,7 @@ export const Title = styled.h1`
     }
   }
 
-  @media(max-width: 540px) {
+  @media (max-width: 540px) {
     font-size: 32px;
   }
 `;
@@ -89,7 +93,6 @@ export const NumberAndTel = styled.div`
 
   @media (max-width: 850px) {
     justify-content: center;
-    align-items: center;
     gap: 18px;
   }
 `;
@@ -99,6 +102,10 @@ export const Tel = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 36px;
+
+  @media (max-width: 390px) {
+    gap: 15px;
+  }
 `;
 
 export const Mail = styled.div`
@@ -106,16 +113,30 @@ export const Mail = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 36px;
+
+  @media (max-width: 390px) {
+    gap: 10px;
+  }
 `;
 
 export const Handset = styled(handset)`
   width: 28px;
   height: 28px;
+
+  @media (max-width: 390px) {
+    width: 24px;
+    height: 24px;
+  }
 `;
 
 export const Envelope = styled(envelope)`
   width: 28px;
   height: 22.4px;
+
+  @media (max-width: 390px) {
+    width: 24px;
+    height: 19.2px;
+  }
 `;
 
 const fadeInFromLeft = keyframes`
@@ -221,6 +242,10 @@ export const YourEmail = styled.input`
   @media (max-width: 600px) {
     width: 350px;
   }
+
+  @media (max-width: 390px) {
+    width: 250px;
+  }
 `;
 
 export const Message = styled.input`
@@ -250,6 +275,10 @@ export const Message = styled.input`
 
   @media (max-width: 600px) {
     width: 350px;
+  }
+
+  @media (max-width: 390px) {
+    width: 250px;
   }
 `;
 

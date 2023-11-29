@@ -14,6 +14,9 @@ import {
   Mail,
   Email,
   Box,
+  MobileFooter,
+  Facebook,
+  Instagram,
 } from "./styled";
 import logo from "../Header/logo.png";
 
@@ -49,9 +52,13 @@ export const Footer = () => (
           </NumberAndTel>
         </Box>
       </Contact>
+      <MobileFooter>
+        <Instagram />
+        <Facebook />
+      </MobileFooter>
     </Wrapper>
     <LogoContainer>
-      <Image src={logo} />
+        <Image src={logo} />
     </LogoContainer>
   </Container>
 );

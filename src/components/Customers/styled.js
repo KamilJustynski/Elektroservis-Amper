@@ -63,4 +63,9 @@ export const Title = styled.h1`
     font-size: 32px;
     margin-left: 40px;
   }
+
+  @media(max-width: 390px) {
+    margin-left: 25px;
+  }
+
 `;

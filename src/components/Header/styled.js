@@ -9,8 +9,8 @@ export const Container = styled.div`
 
   @media (max-width: 660px) {
     justify-content: space-between;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 `;
 
@@ -88,7 +88,7 @@ export const Button = styled.button`
   transition: background 0.3s ease;
   font-style: italic;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 660px) {
     padding: 12px 14px;
 
     ${({ display }) =>
@@ -156,8 +156,6 @@ export const NavLogo = styled(nav)`
 
 export const MobileNavigation = styled.button`
   display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   border: none;
   background: ${({ theme }) => theme.colors.white};
