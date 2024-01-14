@@ -1,8 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { ReactComponent as facebook } from "./facebook.svg";
 import { ReactComponent as instagram } from "./instagram.svg";
-import { ReactComponent as facebook } from "./facebook.svg";
-import { ReactComponent as instagram } from "./instagram.svg";
+
 
 const fadeInFromLeft = keyframes`
   from {
