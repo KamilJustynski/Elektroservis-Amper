@@ -7,11 +7,11 @@ export const Container = styled.div`
   gap: 40px;
   justify-content: center;
   align-items: center;
-  background-image: url("https://s3-alpha-sig.figma.com/img/d4cd/ece7/2b9610d9d826a673fec38f8971096293?Expires=1701043200&Signature=ZLyB1IT8fF-L72z5IYAxETN2hynmM0CljMLQDZ6fuQN9CLTTrvGS1UjIF-7NulwSFQ1LlXoYZyxwiXrHoK987QH2G0cOGFSoJtbkJi7omhGkbo-5F26Jgoq-gfWUBOpSCuNkY3yqmA7VM3TprLAXC5ihj4c0GE6lUs6gKVCYzOUvS~k4dMMAG-TWFZ3mIPLPwc6Roqr8kp0NDNf4lkajBpQQYNgHfn90LcXBo6fCiMK3HsNX3iQJaIVvvsj-0VoERIiSAjaoAptztQXHD1doIc3Xli3uabkKWBeLbQqFO8K73dI0EqpX-GTDQgqSBPmL3pph-l4o61YnJgLuWwikPg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+  background-image: url("https://s3-alpha-sig.figma.com/img/d4cd/ece7/2b9610d9d826a673fec38f8971096293?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QIpYFEi48JlCTZ3ow6ic3GyDSSZXSb~pWFBMB9r6792YUjkBa633H49g-aTYNll0xukXpdkmdH7TQ0fRjqmpKiPGYb3pdAcINHt7osplApveRzBCzDoNytOJsXkXoKqBfM7SwNOkieNa-uYNt0jjrQ8hVAwpugPvK-~~Wz4rENM9rtPFgbJ0EVR2beIMQ96cI6bwDiCo1CEchm~rbwCKHVDIXXid8qnw219rVh34IyhFSdetoQ5HNzpwUbfaeFTat1eafcPjdcPWFUo40BaK1tHCcfTrf~y1mSBYj7yIvOUHjNEKXc4LlAOzEjRvGjSVC3G3IscjkGwhfoZQ5V2Vqg__");
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 624px;
+  height: 800px;
   flex-shrink: 0;
   margin-top: 119px 0 53px 0;
 `;
@@ -23,6 +23,14 @@ export const MainText = styled.h1`
   font-weight: 600;
   margin: 0;
   font-style: italic;
+
+  @media (max-width: 850px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 38px;
+  }
 `;
 
 export const SecondText = styled.h2`
@@ -30,6 +38,14 @@ export const SecondText = styled.h2`
   text-align: center;
   font-size: 24px;
   font-weight: 400;
+
+  @media (max-width: 850px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 14px;
+  }
 `;
 
 export const Button = styled.button`
@@ -45,6 +61,14 @@ export const Button = styled.button`
   overflow: hidden;
   transition: background 0.3s ease;
   font-style: italic;
+
+  @media (max-width: 850px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 12px;
+  }
 
   span {
     position: relative;

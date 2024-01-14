@@ -5,11 +5,31 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  row-gap: 199px;
-  margin: 140px 100px;
+  gap: 199px;
+  margin: 140px 200px;
+ 
 
-  @media(max-width: 1200px) {
-    margin: 140px 50px;
+  @media(max-width: 1440px) {
+    margin: 140px 100px;
+  }
+
+  @media (max-width: 1200px) {
+    margin: 100px 80px;
+    gap: 100px;
+  }
+
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr;
+    margin: 50px 80px;
+    gap: 70px;
+  }
+
+  @media (max-width: 540px) {
+    margin: 40px 40px;
+  }
+
+  @media (max-width: 390px) {
+    margin: 40px 25px;
   }
 `;
 
@@ -17,6 +37,10 @@ export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (max-width: 850px) {
+    justify-content: center;
+  }
 `;
 
 export const Title = styled.h1`
@@ -39,6 +63,18 @@ export const Title = styled.h1`
     background-color: ${({ theme }) => theme.colors.orange};
     transform: translateX(-50%);
   }
+
+  @media (max-width: 1200px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 38px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 32px;
+  }
 `;
 
 export const Description = styled.article`
@@ -47,6 +83,18 @@ export const Description = styled.article`
   font-size: 20px;
   font-weight: 400;
   line-height: 1.3;
+
+  @media (max-width: 1200px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 14px;
+  }
 `;
 
 export const Services = styled.button`
@@ -90,6 +138,16 @@ export const Services = styled.button`
     color: ${({ theme }) => theme.colors.white};
     background-color: ${({ theme }) => theme.colors.burntUmber};
   }
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+    max-width: 150px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 12px;
+    padding: 12px 14px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -97,6 +155,11 @@ export const ImageWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+
+  @media (max-width: 850px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Image = styled.img`

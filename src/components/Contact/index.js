@@ -32,11 +32,11 @@ export const Contact = () => (
       <NumberAndTel>
         <Tel>
           <Handset />
-          <Telephone href="tel:+48509768781">+48 509 768 781</Telephone>
+          <Telephone href="tel:+48666900181">+48 666 900 181</Telephone>
         </Tel>
         <Mail>
           <Envelope />
-          <Email href="mailto:amperowski64@wp.pl">amperowski64@wp.pl</Email>
+          <Email href="mailto:wlodarski.dvy@gmail.pl">wlodarski.dvy@gmail.pl</Email>
         </Mail>
       </NumberAndTel>
     </WrapperLeft>
@@ -49,3 +49,4 @@ export const Contact = () => (
     </WrapperRight>
   </Container>
 );
+

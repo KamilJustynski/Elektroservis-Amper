@@ -1,10 +1,17 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
+import { ReactComponent as nav } from "./nav.svg";
 
 export const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 19px 0;
+
+  @media (max-width: 660px) {
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 `;
 
 export const Logo = styled.p`
@@ -14,8 +21,11 @@ export const Logo = styled.p`
 
 export const Navigation = styled.div`
   display: inline-flex;
-  align-items: flex-start;
-  gap: 40px;
+  gap: 80px;
+
+  @media(max-width: 1440px) {
+    gap: 40px;
+  }
 `;
 
 const fadeInFromLeft = keyframes`
@@ -33,6 +43,18 @@ export const Option = styled.a`
   font-size: 24px;
   font-weight: 500;
   cursor: pointer;
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 660px) {
+    display: none;
+  }
 
   &:hover {
     color: ${({ theme }) => theme.colors.nero};
@@ -69,6 +91,17 @@ export const Button = styled.button`
   transition: background 0.3s ease;
   font-style: italic;
 
+  @media (max-width: 660px) {
+    padding: 12px 14px;
+
+    ${({ display }) =>
+      display &&
+      css`
+        display: none;
+      `}
+  }
+
+
   span {
     position: relative;
     z-index: 1;
@@ -99,10 +132,38 @@ export const Text = styled.p`
   font-size: 24px;
   font-weight: 400;
   margin: 0;
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 660px) {
+    font-size: 16px;
+  }
+
+  @media(max-width: 540px) {
+    font-size: 12px;
+  }
 `;
 
 export const Image = styled.img`
   width: 60px;
   height: 60px;
   margin: 0;
+`;
+
+export const NavLogo = styled(nav)`
+  width: 27px;
+  height: 27px;
+`;
+
+export const MobileNavigation = styled.button`
+  display: flex;
+  cursor: pointer;
+  border: none;
+  background: ${({ theme }) => theme.colors.white};
+
+  @media (min-width: 661px) {
+    display: none;
+  }
 `;

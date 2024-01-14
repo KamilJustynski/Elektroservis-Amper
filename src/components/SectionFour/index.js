@@ -1,15 +1,20 @@
 import {
+  Wrapper,
+  SectionTitle,
+  Image,
+  ImageWrapper,
   Container,
   GridWrapper,
   GridItem,
   Title,
   Description,
-} from "../SectionThree/styled";
-import { Wrapper, SectionTitle, Image, ImageWrapper } from "./styled";
+  SectionTitleMobile
+} from "./styled";
 import Picture from "./image.png";
 
 export const SectionFour = () => (
   <Container center>
+    <SectionTitleMobile>Serwis elektryczny</SectionTitleMobile>
     <ImageWrapper>
       <Image src={Picture} alt="Electrical box" />
     </ImageWrapper>

@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { ReactComponent as handset } from "./handset.svg";
 import { ReactComponent as envelope } from "./envelope.svg";
 
@@ -6,9 +6,35 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 200px;
+  gap: 150px;
   background-color: ${({ theme }) => theme.colors.solitude};
-  padding: 118px 0;
+  padding: 118px 200px;
+
+  @media (max-width: 1440px) {
+    padding: 100px 100px;
+  }
+
+  @media (max-width: 1200px) {
+    gap: 100px;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 100px 80px;
+  }
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+    padding: 50px 50px;
+    gap: 50px;
+  }
+
+  @media (max-width: 540px) {
+    padding: 40px 40px;
+  }
+
+  @media(max-width: 390px) {
+    padding: 40px 25px;
+  }
 `;
 
 export const WrapperLeft = styled.div`
@@ -17,7 +43,10 @@ export const WrapperLeft = styled.div`
   flex-direction: column;
   gap: 64px;
   width: 100%;
-  margin-left: 80px;
+
+  @media (max-width: 850px) {
+    gap: 50px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -38,6 +67,25 @@ export const Title = styled.h1`
     background-color: ${({ theme }) => theme.colors.black};
     transform: translateX(-50%);
   }
+
+  @media (max-width: 1200px) {
+    font-size: 38px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 18%;
+      bottom: -10px;
+      width: 108px;
+      height: 2px;
+      background-color: ${({ theme }) => theme.colors.black};
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 540px) {
+    font-size: 32px;
+  }
 `;
 
 export const NumberAndTel = styled.div`
@@ -46,6 +94,11 @@ export const NumberAndTel = styled.div`
   gap: 28px;
   flex-direction: column;
   width: 100%;
+
+  @media (max-width: 850px) {
+    justify-content: center;
+    gap: 18px;
+  }
 `;
 
 export const Tel = styled.div`
@@ -53,6 +106,10 @@ export const Tel = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 36px;
+
+  @media (max-width: 390px) {
+    gap: 15px;
+  }
 `;
 
 export const Mail = styled.div`
@@ -60,16 +117,30 @@ export const Mail = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 36px;
+
+  @media (max-width: 390px) {
+    gap: 10px;
+  }
 `;
 
 export const Handset = styled(handset)`
   width: 28px;
   height: 28px;
+
+  @media (max-width: 390px) {
+    width: 24px;
+    height: 24px;
+  }
 `;
 
 export const Envelope = styled(envelope)`
   width: 28px;
   height: 22.4px;
+
+  @media (max-width: 390px) {
+    width: 24px;
+    height: 19.2px;
+  }
 `;
 
 const fadeInFromLeft = keyframes`
@@ -107,6 +178,10 @@ export const Telephone = styled.a`
   &:hover::before {
     animation: ${fadeInFromLeft} 0.5s ease forwards;
   }
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
 `;
 
 export const Email = styled.a`
@@ -135,6 +210,10 @@ export const Email = styled.a`
   &:hover::before {
     animation: ${fadeInFromLeft} 0.5s ease forwards;
   }
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
 `;
 
 export const WrapperRight = styled.div`
@@ -142,7 +221,6 @@ export const WrapperRight = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   gap: 28px;
-  margin-right: 80px;
   max-width: 500px;
 `;
 
@@ -152,6 +230,26 @@ export const YourEmail = styled.input`
   background-color: ${({ theme }) => theme.colors.solitude};
   border: none;
   border-bottom: solid 1px;
+
+  @media (max-width: 1200px) {
+    width: 350px;
+  }
+
+  @media (max-width: 1000px) {
+    width: 300px;
+  }
+
+  @media (max-width: 850px) {
+    width: 450px;
+  }
+
+  @media (max-width: 600px) {
+    width: 350px;
+  }
+
+  @media (max-width: 390px) {
+    width: 250px;
+  }
 `;
 
 export const Message = styled.input`
@@ -167,12 +265,30 @@ export const Message = styled.input`
     left: 0;
     padding: 8px;
   }
+
+  @media (max-width: 1200px) {
+    width: 350px;
+  }
+
+  @media (max-width: 1000px) {
+    width: 300px;
+  }
+  @media (max-width: 850px) {
+    width: 450px;
+  }
+
+  @media (max-width: 600px) {
+    width: 350px;
+  }
+
+  @media (max-width: 390px) {
+    width: 250px;
+  }
 `;
 
 export const Button = styled.button`
   display: inline-block;
   width: 108px;
-  height: 60px;
   padding: 16px 20px;
   border-radius: 20px 0px;
   background: ${({ theme }) => theme.colors.endeavour};
@@ -185,6 +301,14 @@ export const Button = styled.button`
   overflow: hidden;
   transition: background 0.3s ease;
   font-style: italic;
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 660px) {
+    padding: 12px 14px;
+  }
 
   span {
     position: relative;
@@ -210,3 +334,4 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.colors.sanMarino};
   }
 `;
+

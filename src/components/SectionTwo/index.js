@@ -14,7 +14,9 @@ import pictureTwo from "./pictureTwo.png";
 export const SectionTwo = () => (
   <Container>
     <GridItem>
+   
       <Image src={pictureOne} />
+    
     </GridItem>
     <GridItem>
       <Wrapper>
@@ -55,7 +57,9 @@ export const SectionTwo = () => (
       </Wrapper>
     </GridItem>
     <GridItem>
+    
       <Image src={pictureTwo} />
+      
     </GridItem>
   </Container>
 );

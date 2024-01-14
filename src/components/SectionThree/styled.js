@@ -1,11 +1,12 @@
 import styled, { css } from "styled-components";
+import { ReactComponent as polygon } from "./polygon.svg";
 
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   gap: 93px;
-  margin: 140px 100px;
+  margin: 140px 200px;
 
   ${({ center }) =>
     center &&
@@ -18,13 +19,22 @@ export const Container = styled.div`
 export const GridWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   align-items: flex-start;
-  grid-gap: 64px;
+  grid-gap: 30px;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     grid-gap: 30px;
   }
+`;
+
+export const FlexWrapper = styled.div`
+  display: flex;
+  width: 313px;
+  height: 62px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
 `;
 
 export const GridItem = styled.div`
@@ -56,6 +66,7 @@ export const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   gap: 36px;
+  max-width: 500px;
 `;
 
 export const Name = styled.h1`
@@ -122,4 +133,9 @@ export const Button = styled.button`
     color: ${({ theme }) => theme.colors.white};
     background-color: ${({ theme }) => theme.colors.kournikova};
   }
+`;
+
+export const Polygon = styled(polygon)`
+  min-width: 27px;
+  min-height: 27px;
 `;
