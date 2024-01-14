@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 150px;
+  gap: 150px;
   background-color: ${({ theme }) => theme.colors.solitude};
   padding: 118px 200px;
 
@@ -43,6 +44,10 @@ export const WrapperLeft = styled.div`
   flex-direction: column;
   gap: 64px;
   width: 100%;
+
+  @media (max-width: 850px) {
+    gap: 50px;
+  }
 
   @media (max-width: 850px) {
     gap: 50px;
@@ -86,6 +91,25 @@ export const Title = styled.h1`
   @media (max-width: 540px) {
     font-size: 32px;
   }
+
+  @media (max-width: 1200px) {
+    font-size: 38px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 18%;
+      bottom: -10px;
+      width: 108px;
+      height: 2px;
+      background-color: ${({ theme }) => theme.colors.black};
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 540px) {
+    font-size: 32px;
+  }
 `;
 
 export const NumberAndTel = styled.div`
@@ -94,6 +118,11 @@ export const NumberAndTel = styled.div`
   gap: 28px;
   flex-direction: column;
   width: 100%;
+
+  @media (max-width: 850px) {
+    justify-content: center;
+    gap: 18px;
+  }
 
   @media (max-width: 850px) {
     justify-content: center;
@@ -110,6 +139,10 @@ export const Tel = styled.div`
   @media (max-width: 390px) {
     gap: 15px;
   }
+
+  @media (max-width: 390px) {
+    gap: 15px;
+  }
 `;
 
 export const Mail = styled.div`
@@ -117,6 +150,10 @@ export const Mail = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 36px;
+
+  @media (max-width: 390px) {
+    gap: 10px;
+  }
 
   @media (max-width: 390px) {
     gap: 10px;
@@ -131,11 +168,21 @@ export const Handset = styled(handset)`
     width: 24px;
     height: 24px;
   }
+
+  @media (max-width: 390px) {
+    width: 24px;
+    height: 24px;
+  }
 `;
 
 export const Envelope = styled(envelope)`
   width: 28px;
   height: 22.4px;
+
+  @media (max-width: 390px) {
+    width: 24px;
+    height: 19.2px;
+  }
 
   @media (max-width: 390px) {
     width: 24px;
@@ -182,6 +229,10 @@ export const Telephone = styled.a`
   @media (max-width: 1200px) {
     font-size: 20px;
   }
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
 `;
 
 export const Email = styled.a`
@@ -214,6 +265,10 @@ export const Email = styled.a`
   @media (max-width: 1200px) {
     font-size: 20px;
   }
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
 `;
 
 export const WrapperRight = styled.div`
@@ -230,6 +285,26 @@ export const YourEmail = styled.input`
   background-color: ${({ theme }) => theme.colors.solitude};
   border: none;
   border-bottom: solid 1px;
+
+  @media (max-width: 1200px) {
+    width: 350px;
+  }
+
+  @media (max-width: 1000px) {
+    width: 300px;
+  }
+
+  @media (max-width: 850px) {
+    width: 450px;
+  }
+
+  @media (max-width: 600px) {
+    width: 350px;
+  }
+
+  @media (max-width: 390px) {
+    width: 250px;
+  }
 
   @media (max-width: 1200px) {
     width: 350px;
@@ -284,6 +359,25 @@ export const Message = styled.input`
   @media (max-width: 390px) {
     width: 250px;
   }
+
+  @media (max-width: 1200px) {
+    width: 350px;
+  }
+
+  @media (max-width: 1000px) {
+    width: 300px;
+  }
+  @media (max-width: 850px) {
+    width: 450px;
+  }
+
+  @media (max-width: 600px) {
+    width: 350px;
+  }
+
+  @media (max-width: 390px) {
+    width: 250px;
+  }
 `;
 
 export const Button = styled.button`
@@ -301,6 +395,14 @@ export const Button = styled.button`
   overflow: hidden;
   transition: background 0.3s ease;
   font-style: italic;
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 660px) {
+    padding: 12px 14px;
+  }
 
   @media (max-width: 1200px) {
     font-size: 20px;

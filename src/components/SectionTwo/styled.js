@@ -20,9 +20,19 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   margin-left: 40px;
+  margin-left: 40px;
 
   @media (max-width: 1200px) {
+  @media (max-width: 1200px) {
     margin-left: 30px;
+  }
+
+  @media (max-width: 1000px) {
+    margin-left: 20px;
+  }
+
+  @media (max-width: 660px) {
+    margin: 70px 30px;
   }
 
   @media (max-width: 1000px) {
@@ -166,6 +176,25 @@ export const Description = styled.article`
   margin-bottom: 32px;
   flex-shrink: 0;
 
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 660px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 14px;
   @media (max-width: 1200px) {
     font-size: 16px;
   }

@@ -16,7 +16,7 @@ function App() {
       <Background />
       <SectionOne />
       <SectionTwo />
-      <SectionThree />
+      {/* <SectionThree /> */}
       <SectionFour />
       <SectionFive />
       <Customers />
