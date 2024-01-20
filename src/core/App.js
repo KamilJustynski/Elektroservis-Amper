@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Background } from "../components/Background";
 import { Contact } from "../components/Contact";
 import { Customers } from "../components/Customers";
@@ -10,17 +11,35 @@ import { SectionThree } from "../components/SectionThree";
 import { SectionTwo } from "../components/SectionTwo";
 
 function App() {
+  const aboutUsRef = useRef(null);
+  const servicesRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollTo = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
-      <Header />
+      <Header
+        scrollToSection={(section) => {
+          scrollTo(section === "SectionOne" ? aboutUsRef : "");
+          scrollTo(section === "SectionThree" ? servicesRef : "");
+          scrollTo(section === "Contact" ? contactRef : "");
+        }}
+      />
       <Background />
-      <SectionOne />
+      <SectionOne sectionRef={aboutUsRef} />
       <SectionTwo />
-      <SectionThree />
+      <SectionThree sectionRef={servicesRef} />
       <SectionFour />
       <SectionFive />
       <Customers />
-      <Contact />
+      <Contact sectionRef={contactRef} />
       <Footer />
     </>
   );

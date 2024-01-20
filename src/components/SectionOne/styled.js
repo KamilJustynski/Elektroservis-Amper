@@ -7,9 +7,8 @@ export const Container = styled.div`
   align-items: center;
   gap: 199px;
   margin: 140px 200px;
- 
 
-  @media(max-width: 1440px) {
+  @media (max-width: 1440px) {
     margin: 140px 100px;
   }
 
@@ -28,8 +27,6 @@ export const Container = styled.div`
     margin: 40px 40px;
   }
 
-  @media (max-width: 390px) {
-    margin: 40px 25px;
   @media (max-width: 1200px) {
     margin: 100px 80px;
     gap: 100px;

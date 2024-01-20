@@ -1,5 +1,6 @@
 import styled, { keyframes, css } from "styled-components";
 import { ReactComponent as nav } from "./nav.svg";
+import { ReactComponent as vector } from "./vector.svg";
 
 export const Container = styled.div`
   display: flex;
@@ -23,7 +24,7 @@ export const Navigation = styled.div`
   display: inline-flex;
   gap: 80px;
 
-  @media(max-width: 1440px) {
+  @media (max-width: 1440px) {
     gap: 40px;
   }
 `;
@@ -101,7 +102,6 @@ export const Button = styled.button`
       `}
   }
 
-
   span {
     position: relative;
     z-index: 1;
@@ -141,7 +141,7 @@ export const Text = styled.p`
     font-size: 16px;
   }
 
-  @media(max-width: 540px) {
+  @media (max-width: 540px) {
     font-size: 12px;
   }
 `;
@@ -166,4 +166,38 @@ export const MobileNavigation = styled.button`
   @media (min-width: 661px) {
     display: none;
   }
+`;
+
+export const MobileContainer = styled.div`
+  display: flex;
+  width: 263px;
+  height: 500px;
+  background: #121212;
+  position: absolute;
+  top: 0;
+  right: -263px;
+  display: none;
+`;
+
+export const MobileOptions = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MobileImg = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 25px 33px;
+`;
+
+export const Vector = styled(vector)`
+  width: 9px;
+  height: 18px;
+`;
+
+export const MobileOption = styled.p`
+  color: #fff;
+  font-size: 28px;
+  font-style: italic;
 `;

@@ -11,8 +11,8 @@ import {
   FlexWrapper
 } from "./styled";
 
-export const SectionThree = () => (
-  <Container>
+export const SectionThree = ({sectionRef}) => (
+  <Container ref={sectionRef}>
     <Wrapper>
       <Name>Pomiary</Name>
       <Article>

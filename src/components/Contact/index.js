@@ -15,8 +15,8 @@ import {
   Button,
 } from "./styled";
 
-export const Contact = () => (
-  <Container>
+export const Contact = ({sectionRef}) => (
+  <Container ref={sectionRef}>
     <WrapperLeft>
       <Title>Skontaktuj się z nami</Title>
       <NumberAndTel>
