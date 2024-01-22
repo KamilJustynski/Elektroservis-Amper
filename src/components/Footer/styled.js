@@ -2,16 +2,6 @@ import styled, { keyframes } from "styled-components";
 import { ReactComponent as facebook } from "./facebook.svg";
 import { ReactComponent as instagram } from "./instagram.svg";
 
-
-const fadeInFromLeft = keyframes`
-  from {
-    width: 0;
-  }
-  to {
-    width: 50%;
-  }
-`;
-
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
@@ -43,10 +33,6 @@ export const Menu = styled.div`
   @media (max-width: 540px) {
     display: none;
   }
-
-  @media (max-width: 540px) {
-    display: none;
-  }
 `;
 
 export const Title = styled.h1`
@@ -56,14 +42,6 @@ export const Title = styled.h1`
   font-weight: 400;
   margin: 0;
   padding-bottom: 39px;
-
-  @media (max-width: 850px) {
-    font-size: 28px;
-  }
-
-  @media (max-width: 660px) {
-    font-size: 20px;
-  }
 
   @media (max-width: 850px) {
     font-size: 28px;
@@ -107,22 +85,6 @@ export const Option = styled.a`
     transition: width 0.3s ease;
   }
 
-  &:hover::before {
-    animation: ${fadeInFromLeft} 0.5s ease forwards;
-  }
-
-  @media (max-width: 1200px) {
-    font-size: 20px;
-  }
-
-  @media (max-width: 850px) {
-    font-size: 16px;
-  }
-
-  @media (max-width: 660px) {
-    font-size: 12px;
-  }
-
   @media (max-width: 1200px) {
     font-size: 20px;
   }
@@ -140,10 +102,6 @@ export const Contact = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
-  @media (max-width: 540px) {
-    display: none;
-  }
 
   @media (max-width: 540px) {
     display: none;
@@ -167,15 +125,6 @@ export const Image = styled.img`
     width: 50px;
     height: 50px;
   }
-
-  @media (max-width: 850px) {
-    width: 80px;
-    height: 80px;
-  }
-  @media (max-width: 660px) {
-    width: 50px;
-    height: 50px;
-  }
 `;
 
 export const Wrapper = styled.div`
@@ -183,14 +132,6 @@ export const Wrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   gap: 124px;
-
-  @media (max-width: 850px) {
-    gap: 80px;
-  }
-
-  @media (max-width: 660px) {
-    gap: 40px;
-  }
 
   @media (max-width: 850px) {
     gap: 80px;
@@ -243,22 +184,6 @@ export const Telephone = styled.a`
     transition: width 0.3s ease;
   }
 
-  &:hover::before {
-    animation: ${fadeInFromLeft} 0.5s ease forwards;
-  }
-
-  @media (max-width: 1200px) {
-    font-size: 20px;
-  }
-
-  @media (max-width: 850px) {
-    font-size: 16px;
-  }
-
-  @media (max-width: 660px) {
-    font-size: 12px;
-  }
-
   @media (max-width: 1200px) {
     font-size: 20px;
   }
@@ -293,22 +218,6 @@ export const Email = styled.a`
     left: 0;
     background-color: ${({ theme }) => theme.colors.endeavour};
     transition: width 0.3s ease;
-  }
-
-  &:hover::before {
-    animation: ${fadeInFromLeft} 0.5s ease forwards;
-  }
-
-  @media (max-width: 1200px) {
-    font-size: 20px;
-  }
-
-  @media (max-width: 850px) {
-    font-size: 16px;
-  }
-
-  @media (max-width: 660px) {
-    font-size: 12px;
   }
 
   @media (max-width: 1200px) {

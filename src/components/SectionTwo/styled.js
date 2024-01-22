@@ -5,10 +5,20 @@ export const Container = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   padding: 0 200px;
-  background-color: ${({theme}) => theme.colors.solitude};
+  background-color: ${({ theme }) => theme.colors.solitude};
 
   @media (max-width: 1440px) {
-    padding: 0 100px;
+    padding: 50px 80px;
+    gap: 100px;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 50px 80px;
+    gap: 0
+  }
+
+  @media (max-width: 850px) {
+    padding: 50px 40px;
   }
 
   @media (max-width: 660px) {
@@ -16,23 +26,21 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
   }
+
+  @media (max-width: 540px) {
+    padding: 50px 20px;
+  }
+
+  @media (max-width: 390px) {
+    padding: 50px 10px;
+  }
 `;
 
 export const Wrapper = styled.div`
   margin-left: 40px;
-  margin-left: 40px;
 
-  @media (max-width: 1200px) {
   @media (max-width: 1200px) {
     margin-left: 30px;
-  }
-
-  @media (max-width: 1000px) {
-    margin-left: 20px;
-  }
-
-  @media (max-width: 660px) {
-    margin: 70px 30px;
   }
 
   @media (max-width: 1000px) {
@@ -50,6 +58,11 @@ export const GridItem = styled.div`
   align-items: center;
   justify-content: center;
   padding: 50px;
+  width: 100%;
+
+  @media (max-width: 1440px) {
+    padding: 10px;
+  }
 
   @media (max-width: 660px) {
     align-items: center;
@@ -61,6 +74,10 @@ export const GridItem = styled.div`
     &:nth-child(1) {
       order: 2;
     }
+  }
+
+  @media (max-width: 540px) {
+    padding: 0;
   }
 `;
 
@@ -87,6 +104,11 @@ export const Headline = styled.p`
     font-size: 22px;
   }
 
+  @media (max-width: 1200px) {
+    margin: 0;
+    font-size: 20px;
+  }
+
   @media (max-width: 1000px) {
     font-size: 18px;
 
@@ -105,6 +127,7 @@ export const Headline = styled.p`
   @media (max-width: 850px) {
     font-size: 14px;
     margin-bottom: 20px;
+    margin: 0;
 
     &::after {
       content: "";
@@ -149,13 +172,18 @@ export const Title = styled.h1`
     font-size: 38px;
   }
 
+  @media (max-width: 1200px) {
+    margin: 10px 0;
+    font-size: 32px;
+  }
+
   @media (max-width: 1000px) {
     font-size: 32px;
   }
 
   @media (max-width: 850px) {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 22px;
+    margin: 10px 0;
   }
 
   @media (max-width: 660px) {
@@ -178,25 +206,7 @@ export const Description = styled.article`
 
   @media (max-width: 1200px) {
     font-size: 16px;
-  }
-
-  @media (max-width: 1000px) {
-    font-size: 14px;
-  }
-
-  @media (max-width: 850px) {
-    font-size: 12px;
-    margin-bottom: 20px;
-  }
-
-  @media (max-width: 660px) {
-    font-size: 16px;
-  }
-
-  @media (max-width: 540px) {
-    font-size: 14px;
-  @media (max-width: 1200px) {
-    font-size: 16px;
+    margin-bottom: 10px;
   }
 
   @media (max-width: 1000px) {
@@ -220,5 +230,9 @@ export const Description = styled.article`
 export const Image = styled.img`
   max-width: 450px;
   max-height: auto;
-`;
 
+  @media(max-width: 1200px) {
+    width: 100%;
+    max-height: 100%;
+  }
+`;

@@ -48,10 +48,6 @@ export const WrapperLeft = styled.div`
   @media (max-width: 850px) {
     gap: 50px;
   }
-
-  @media (max-width: 850px) {
-    gap: 50px;
-  }
 `;
 
 export const Title = styled.h1`
@@ -91,25 +87,6 @@ export const Title = styled.h1`
   @media (max-width: 540px) {
     font-size: 32px;
   }
-
-  @media (max-width: 1200px) {
-    font-size: 38px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 18%;
-      bottom: -10px;
-      width: 108px;
-      height: 2px;
-      background-color: ${({ theme }) => theme.colors.black};
-      transform: translateX(-50%);
-    }
-  }
-
-  @media (max-width: 540px) {
-    font-size: 32px;
-  }
 `;
 
 export const NumberAndTel = styled.div`
@@ -118,11 +95,6 @@ export const NumberAndTel = styled.div`
   gap: 28px;
   flex-direction: column;
   width: 100%;
-
-  @media (max-width: 850px) {
-    justify-content: center;
-    gap: 18px;
-  }
 
   @media (max-width: 850px) {
     justify-content: center;
@@ -139,10 +111,6 @@ export const Tel = styled.div`
   @media (max-width: 390px) {
     gap: 15px;
   }
-
-  @media (max-width: 390px) {
-    gap: 15px;
-  }
 `;
 
 export const Mail = styled.div`
@@ -154,20 +122,11 @@ export const Mail = styled.div`
   @media (max-width: 390px) {
     gap: 10px;
   }
-
-  @media (max-width: 390px) {
-    gap: 10px;
-  }
 `;
 
 export const Handset = styled(handset)`
   width: 28px;
   height: 28px;
-
-  @media (max-width: 390px) {
-    width: 24px;
-    height: 24px;
-  }
 
   @media (max-width: 390px) {
     width: 24px;
@@ -183,20 +142,6 @@ export const Envelope = styled(envelope)`
     width: 24px;
     height: 19.2px;
   }
-
-  @media (max-width: 390px) {
-    width: 24px;
-    height: 19.2px;
-  }
-`;
-
-const fadeInFromLeft = keyframes`
-  from {
-    width: 0;
-  }
-  to {
-    width: 50%;
-  }
 `;
 
 export const Telephone = styled.a`
@@ -207,7 +152,7 @@ export const Telephone = styled.a`
   position: relative;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.nero};
+    color: ${({ theme }) => theme.colors.sanMarino};
     transition: 0.3s;
   }
 
@@ -222,13 +167,6 @@ export const Telephone = styled.a`
     transition: width 0.3s ease;
   }
 
-  &:hover::before {
-    animation: ${fadeInFromLeft} 0.5s ease forwards;
-  }
-
-  @media (max-width: 1200px) {
-    font-size: 20px;
-  }
 
   @media (max-width: 1200px) {
     font-size: 20px;
@@ -243,7 +181,7 @@ export const Email = styled.a`
   position: relative;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.nero};
+    color: ${({ theme }) => theme.colors.sanMarino};
     transition: 0.3s;
   }
 
@@ -256,14 +194,6 @@ export const Email = styled.a`
     left: 0;
     background-color: ${({ theme }) => theme.colors.endeavour};
     transition: width 0.3s ease;
-  }
-
-  &:hover::before {
-    animation: ${fadeInFromLeft} 0.5s ease forwards;
-  }
-
-  @media (max-width: 1200px) {
-    font-size: 20px;
   }
 
   @media (max-width: 1200px) {
@@ -285,26 +215,6 @@ export const YourEmail = styled.input`
   background-color: ${({ theme }) => theme.colors.solitude};
   border: none;
   border-bottom: solid 1px;
-
-  @media (max-width: 1200px) {
-    width: 350px;
-  }
-
-  @media (max-width: 1000px) {
-    width: 300px;
-  }
-
-  @media (max-width: 850px) {
-    width: 450px;
-  }
-
-  @media (max-width: 600px) {
-    width: 350px;
-  }
-
-  @media (max-width: 390px) {
-    width: 250px;
-  }
 
   @media (max-width: 1200px) {
     width: 350px;
@@ -348,25 +258,7 @@ export const Message = styled.input`
   @media (max-width: 1000px) {
     width: 300px;
   }
-  @media (max-width: 850px) {
-    width: 450px;
-  }
 
-  @media (max-width: 600px) {
-    width: 350px;
-  }
-
-  @media (max-width: 390px) {
-    width: 250px;
-  }
-
-  @media (max-width: 1200px) {
-    width: 350px;
-  }
-
-  @media (max-width: 1000px) {
-    width: 300px;
-  }
   @media (max-width: 850px) {
     width: 450px;
   }
@@ -395,14 +287,6 @@ export const Button = styled.button`
   overflow: hidden;
   transition: background 0.3s ease;
   font-style: italic;
-
-  @media (max-width: 1200px) {
-    font-size: 20px;
-  }
-
-  @media (max-width: 660px) {
-    padding: 12px 14px;
-  }
 
   @media (max-width: 1200px) {
     font-size: 20px;

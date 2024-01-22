@@ -5,15 +5,35 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
-  gap: 93px;
+  align-items: center;
+  gap: 50px;
   margin: 140px 200px;
 
-  ${({ center }) =>
-    center &&
-    css`
-      align-items: center;
-      margin: 140px 100px;
-    `}
+  @media (max-width: 1440px) {
+    margin: 100px 80px;
+    justify-content: center;
+  }
+
+  @media (max-width: 1200px) {
+    gap: 40px;
+  }
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    gap: 100px;
+  }
+
+  @media (max-width: 850px) {
+    margin: 50px 80px;
+  }
+
+  @media (max-width: 540px) {
+    margin: 40px 40px;
+  }
+
+  @media (max-width: 390px) {
+    margin: 40px 25px;
+  }
 `;
 
 export const GridWrapper = styled.div`
@@ -21,20 +41,37 @@ export const GridWrapper = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   align-items: flex-start;
-  grid-gap: 30px;
+  row-gap: 40px;
+  column-gap: 50px;
 
   @media (max-width: 1200px) {
-    grid-gap: 30px;
+    column-gap: 40px;
+  }
+
+  @media (max-width: 440px) {
+    column-gap: 20px;
+  }
+
+  @media (max-width: 390px) {
+    column-gap: 10px;
   }
 `;
 
 export const FlexWrapper = styled.div`
   display: flex;
-  width: 313px;
-  height: 62px;
+  max-width: 313px;
+  height: auto;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 20px;
+
+  @media (max-width: 1440px) {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
 `;
 
 export const GridItem = styled.div`
@@ -42,13 +79,27 @@ export const GridItem = styled.div`
   gap: 24px;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 300px;
 `;
 
 export const Title = styled.h2`
   color: ${({ theme }) => theme.colors.black};
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   margin: 0;
+  max-width: 300px;
+
+  @media (max-width: 1000px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 390px) {
+    font-size: 12px;
+  }
 `;
 
 export const Description = styled.article`
@@ -78,6 +129,14 @@ export const Name = styled.h1`
   flex-shrink: 0;
   margin: 0;
 
+  @media (max-width: 1000px) {
+    font-size: 38px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 32px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -94,6 +153,14 @@ export const Article = styled.article`
   color: ${({ theme }) => theme.colors.black};
   font-size: 20px;
   line-height: 1.3;
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 14px;
+  }
 `;
 
 export const Button = styled.button`
@@ -109,6 +176,10 @@ export const Button = styled.button`
   overflow: hidden;
   transition: background 0.3s ease;
   font-style: italic;
+
+  @media (max-width: 1000px) {
+    font-size: 16px;
+  }
 
   span {
     position: relative;
@@ -136,6 +207,6 @@ export const Button = styled.button`
 `;
 
 export const Polygon = styled(polygon)`
-  min-width: 27px;
-  min-height: 27px;
+  min-width: 20px;
+  min-height: 20px;
 `;

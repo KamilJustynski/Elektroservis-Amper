@@ -13,9 +13,10 @@ import {
   MobileOptions,
   MobileOption,
   Vector,
+  VectoreButton,
 } from "./styled";
 import logo from "./logo.png";
-import{ useState }from "react";
+import { useState } from "react";
 
 export const Header = ({ scrollToSection }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -42,15 +43,28 @@ export const Header = ({ scrollToSection }) => {
       <MobileNavigation onClick={toggleMobileMenu}>
         <NavLogo />
       </MobileNavigation>
-      <MobileContainer style={{ right: isMobileMenuOpen ? 0 : "-263px", display: isMobileMenuOpen ? 'flex' : 'none' }}>
+      <MobileContainer
+        style={{
+          right: isMobileMenuOpen ? 0 : "-263px",
+          display: isMobileMenuOpen ? "flex" : "none",
+        }}
+      >
         <MobileImg>
-          <Vector />
+          <VectoreButton onClick={toggleMobileMenu}>
+            <Vector />
+          </VectoreButton>
         </MobileImg>
-        <MobileOptions>
-          <MobileOption>O nas</MobileOption>
-          <MobileOption>Usługi</MobileOption>
+        <MobileOptions onClick={toggleMobileMenu}>
+          <MobileOption onClick={() => scrollToSection("SectionOne")}>
+            O nas
+          </MobileOption>
+          <MobileOption onClick={() => scrollToSection("SectionThree")}>
+            Usługi
+          </MobileOption>
           <MobileOption>Realizacje</MobileOption>
-          <MobileOption>Kontakt</MobileOption>
+          <MobileOption onClick={() => scrollToSection("Contact")}>
+            Kontakt
+          </MobileOption>
         </MobileOptions>
       </MobileContainer>
     </Container>

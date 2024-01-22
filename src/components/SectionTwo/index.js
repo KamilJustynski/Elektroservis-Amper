@@ -57,9 +57,7 @@ export const SectionTwo = () => (
       </Wrapper>
     </GridItem>
     <GridItem>
-    
       <Image src={pictureTwo} />
-      
     </GridItem>
   </Container>
 );

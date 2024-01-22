@@ -49,11 +49,6 @@ export const ImageWrapper = styled.div`
   @media (max-width: 1000px) {
     max-width: 100%; 
   }
-  width: 100%;
-
-  @media (max-width: 1000px) {
-    max-width: 100%; 
-  }
 `;
 
 export const Image = styled.img`

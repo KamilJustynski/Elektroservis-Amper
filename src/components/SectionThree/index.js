@@ -8,18 +8,18 @@ import {
   Name,
   Article,
   Button,
-  FlexWrapper
+  FlexWrapper,
 } from "./styled";
 
-export const SectionThree = ({sectionRef}) => (
+export const SectionThree = ({ sectionRef }) => (
   <Container ref={sectionRef}>
     <Wrapper>
       <Name>Pomiary</Name>
       <Article>
-          Dzięki ciągłemu rozwojowi technologicznemu oraz pogłebianiu wiedzy o
-          nowinki i rozwiązania idące z postępem możemy dostraczyć Państwu
-          narzędzia niezbędne do osiągnięcia doskonałych wyników w swoich
-          projektach.
+        Dzięki ciągłemu rozwojowi technologicznemu oraz pogłebianiu wiedzy o
+        nowinki i rozwiązania idące z postępem możemy dostraczyć Państwu
+        narzędzia niezbędne do osiągnięcia doskonałych wyników w swoich
+        projektach.
       </Article>
       <Button>
         <span>Skontaktuj się z nami</span>

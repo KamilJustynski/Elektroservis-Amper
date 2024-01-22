@@ -170,13 +170,16 @@ export const MobileNavigation = styled.button`
 
 export const MobileContainer = styled.div`
   display: flex;
+  flex-direction: column;
   width: 263px;
   height: 500px;
-  background: #121212;
+  background: ${({ theme }) => theme.colors.black};
   position: absolute;
   top: 0;
   right: -263px;
   display: none;
+  right: ${({ isVisible }) => (isVisible ? "0" : "-263px")};
+  transition: right 0.3s ease;
 `;
 
 export const MobileOptions = styled.div`
@@ -186,9 +189,15 @@ export const MobileOptions = styled.div`
 
 export const MobileImg = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   padding: 25px 33px;
+`;
+
+export const VectoreButton = styled.button`
+  background-color: ${({ theme }) => theme.colors.black};
+  border: none;
+  cursor: pointer;
 `;
 
 export const Vector = styled(vector)`
@@ -196,8 +205,39 @@ export const Vector = styled(vector)`
   height: 18px;
 `;
 
-export const MobileOption = styled.p`
-  color: #fff;
+export const MobileOption = styled.button`
+  color: ${({ theme }) => theme.colors.white};
   font-size: 28px;
   font-style: italic;
+  cursor: pointer;
+  background: ${({ theme }) => theme.colors.black};
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.sanMarino};
+    transition: 0.3s;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: ${({ theme }) => theme.colors.endeavour};
+    transition: width 0.3s ease;
+  }
+
+  &:hover::before {
+    animation: ${fadeInFromLeft} 0.5s ease forwards;
+  }
 `;
