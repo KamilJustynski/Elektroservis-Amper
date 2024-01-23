@@ -12,8 +12,8 @@ import {
   MobileImg,
   MobileOptions,
   MobileOption,
-  Vector,
   VectoreButton,
+  Xmark,
 } from "./styled";
 import logo from "./logo.png";
 import { useState } from "react";
@@ -45,13 +45,13 @@ export const Header = ({ scrollToSection }) => {
       </MobileNavigation>
       <MobileContainer
         style={{
-          right: isMobileMenuOpen ? 0 : "-263px",
+          right: isMobileMenuOpen ? 0 : "-100%",
           display: isMobileMenuOpen ? "flex" : "none",
         }}
       >
         <MobileImg>
           <VectoreButton onClick={toggleMobileMenu}>
-            <Vector />
+            <Xmark />
           </VectoreButton>
         </MobileImg>
         <MobileOptions onClick={toggleMobileMenu}>

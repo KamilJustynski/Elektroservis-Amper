@@ -53,8 +53,8 @@ export const Footer = () => (
         </Box>
       </Contact>
       <MobileFooter>
-        <Instagram />
-        <Facebook />
+        <Instagram href="" />
+        <Facebook href="google.com" />
       </MobileFooter>
     </Wrapper>
     <LogoContainer>

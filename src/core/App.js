@@ -1,13 +1,13 @@
 import { useRef } from "react";
 import { Background } from "../components/Background";
-import { Contact } from "../components/Contact";
+import { Contact } from "../components/ContactSection";
 import { Customers } from "../components/Customers";
-import { Footer } from "../components/Footer";
+import { Footer } from "../components/FooterSection";
 import { Header } from "../components/Header";
 import { SectionFive } from "../components/SectionFive";
 import { SectionFour } from "../components/SectionFour";
-import { SectionOne } from "../components/SectionOne";
-import { SectionThree } from "../components/SectionThree";
+import { SectionOne } from "../components/AboutUsSection";
+import { SectionThree } from "../components/ServicesSection";
 import { SectionTwo } from "../components/SectionTwo";
 
 function App() {
@@ -32,7 +32,11 @@ function App() {
           scrollTo(section === "Contact" ? contactRef : "");
         }}
       />
-      <Background />
+      <Background
+        scrollToSection={(section) => {
+          scrollTo(section === "Contact" ? contactRef : "");
+        }}
+      />
       <SectionOne sectionRef={aboutUsRef} />
       <SectionTwo />
       <SectionThree sectionRef={servicesRef} />

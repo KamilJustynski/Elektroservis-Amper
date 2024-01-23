@@ -1,6 +1,7 @@
 import styled, { keyframes, css } from "styled-components";
 import { ReactComponent as nav } from "./nav.svg";
 import { ReactComponent as vector } from "./vector.svg";
+import { ReactComponent as xmark } from "./xmark.svg";
 
 export const Container = styled.div`
   display: flex;
@@ -171,15 +172,13 @@ export const MobileNavigation = styled.button`
 export const MobileContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 263px;
+  width: 100%;
   height: 500px;
   background: ${({ theme }) => theme.colors.black};
   position: absolute;
   top: 0;
-  right: -263px;
+  right: 500px;
   display: none;
-  right: ${({ isVisible }) => (isVisible ? "0" : "-263px")};
-  transition: right 0.3s ease;
 `;
 
 export const MobileOptions = styled.div`
@@ -214,9 +213,9 @@ export const MobileOption = styled.button`
   border: none;
   display: flex;
   flex-direction: column;
-  padding: 25px 0;
-  justify-content: center;
-  align-items: center;
+  padding: 25px 50px;
+  justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
   overflow: hidden;
   transition: background 0.3s ease;
@@ -240,4 +239,9 @@ export const MobileOption = styled.button`
   &:hover::before {
     animation: ${fadeInFromLeft} 0.5s ease forwards;
   }
+`;
+
+export const Xmark = styled(xmark)`
+  width: 24px;
+  height: 24px;
 `;

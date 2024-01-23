@@ -7,7 +7,7 @@ import {
   Wrapper,
 } from "./styled";
 
-export const Background = () => (
+export const Background = ({ scrollToSection }) => (
   <Container>
     <MainText>
       Witaj w Światowej
@@ -19,7 +19,7 @@ export const Background = () => (
       <br /> pomiarów elektrycznych, instalacji elektrycznych, pomiary
       <br /> IT i instalacji IT.
     </SecondText>
-    <Button>
+    <Button onClick={() => scrollToSection("Contact")}>
       <span>Skontaktuj sie z nami</span>
     </Button>
     <Wrapper>

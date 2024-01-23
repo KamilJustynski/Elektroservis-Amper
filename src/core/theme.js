@@ -12,4 +12,13 @@ export const theme = {
     sanMarino: "#254677",
     white: "#fff",
   },
+
+  breakpoints: {
+    desktop: "1440px",
+    mediumDesktop: '1200px',
+    smallDesktop: '1000px',
+    tablet: '850px',
+    horizontalMobile: '540px',
+    verticalMobile: '390px'
+  }
 };
