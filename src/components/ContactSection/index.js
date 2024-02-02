@@ -30,7 +30,7 @@ export const ContactSection = ({ sectionRef }) => {
     if (lastSumbissionTime && timeDifference < 10 * 60 * 1000) {
       setCanSubmit(false);
     }
-  });
+  }, []);
 
   const handleSumbit = (e) => {
     e.preventDefault();
