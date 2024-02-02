@@ -27,36 +27,20 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.black};
   font-size: 48px;
   font-style: italic;
-  font-weight: 400;
-  margin-left: 100px;
-  margin-bottom: 95px;
-  position: relative;
+  font-weight: 500;
+  margin: 118px 200px;
   font-style: italic;
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 4%;
-    bottom: -10px;
-    width: 108px;
-    height: 2px;
-    background-color: ${({ theme }) => theme.colors.black};
-    transform: translateX(-50%);
+  @media(max-width: 1440px) {
+    margin: 118px 100px;
   }
 
   @media(max-width: 1200px) {
     font-size: 38px;
-
-    &::after {
-      content: "";
-    position: absolute;
-    left: 5%;
-    bottom: -10px;
-    width: 108px;
-    height: 2px;
-    background-color: ${({ theme }) => theme.colors.black};
-    transform: translateX(-50%);
   }
+
+  @media(max-width: 850px) {
+    margin: 50px 50px;
   }
 
   @media(max-width: 540px) {

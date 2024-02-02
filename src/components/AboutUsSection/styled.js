@@ -45,23 +45,11 @@ export const DescriptionWrapper = styled.div`
 export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.black};
   font-size: 48px;
-  font-weight: 400;
-  position: relative;
+  font-weight: 500;
   display: inline-block;
   font-style: italic;
   width: fit-content;
   margin-top: 0;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 25%;
-    width: 50%;
-    height: 2px;
-    background-color: ${({ theme }) => theme.colors.orange};
-    transform: translateX(-50%);
-  }
 
   @media (max-width: 1200px) {
     font-size: 38px;

@@ -31,11 +31,13 @@ export const Header = ({ scrollToSection }) => {
         <Image src={logo} />
       </Logo>
       <Navigation>
-        <Option onClick={() => scrollToSection("SectionOne")}>O nas</Option>
-        <Option onClick={() => scrollToSection("SectionThree")}>Usługi</Option>
-        <Option>Realizacje</Option>
+        <Option onClick={() => scrollToSection("AboutUsSection")}>O nas</Option>
+        <Option onClick={() => scrollToSection("ServicesSection")}>
+          Usługi
+        </Option>
+        {/* <Option>Realizacje</Option> */}
       </Navigation>
-      <Button display onClick={() => scrollToSection("Contact")}>
+      <Button display onClick={() => scrollToSection("ContactSection")}>
         <Text>
           <span>Kontakt</span>
         </Text>
@@ -55,14 +57,14 @@ export const Header = ({ scrollToSection }) => {
           </VectoreButton>
         </MobileImg>
         <MobileOptions onClick={toggleMobileMenu}>
-          <MobileOption onClick={() => scrollToSection("SectionOne")}>
+          <MobileOption onClick={() => scrollToSection("AboutUsSection")}>
             O nas
           </MobileOption>
-          <MobileOption onClick={() => scrollToSection("SectionThree")}>
+          <MobileOption onClick={() => scrollToSection("ServicesSection")}>
             Usługi
           </MobileOption>
-          <MobileOption>Realizacje</MobileOption>
-          <MobileOption onClick={() => scrollToSection("Contact")}>
+          {/* <MobileOption>Realizacje</MobileOption> */}
+          <MobileOption onClick={() => scrollToSection("ContactSection")}>
             Kontakt
           </MobileOption>
         </MobileOptions>

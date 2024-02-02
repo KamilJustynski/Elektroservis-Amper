@@ -1,14 +1,13 @@
 import { useRef } from "react";
-import { Background } from "../components/BackgroundSection";
-import { Contact } from "../components/ContactSection";
-import { Customers } from "../components/Customers";
-import { Footer } from "../components/FooterSection";
 import { Header } from "../components/Header";
-import { SectionFive } from "../components/SectionFive";
-import { SectionFour } from "../components/SectionFour";
-import { SectionOne } from "../components/AboutUsSection";
-import { SectionThree } from "../components/ServicesSection";
+import { Background } from "../components/BackgroundSection";
+import { AboutUs } from "../components/AboutUsSection";
+import { SectionOne } from "../components/SectionOne";
+import { ServicesSection } from "../components/ServicesSection";
 import { SectionTwo } from "../components/SectionTwo";
+import { Customers } from "../components/Customers";
+import { ContactSection } from "../components/ContactSection";
+import { Footer } from "../components/FooterSection";
 
 function App() {
   const aboutUsRef = useRef(null);
@@ -27,24 +26,42 @@ function App() {
     <>
       <Header
         scrollToSection={(section) => {
-          scrollTo(section === "SectionOne" ? aboutUsRef : "");
-          scrollTo(section === "SectionThree" ? servicesRef : "");
-          scrollTo(section === "Contact" ? contactRef : "");
+          scrollTo(section === "AboutUsSection" ? aboutUsRef : "");
+          scrollTo(section === "ServicesSection" ? servicesRef : "");
+          scrollTo(section === "ContactSection" ? contactRef : "");
         }}
       />
       <Background
         scrollToSection={(section) => {
-          scrollTo(section === "Contact" ? contactRef : "");
+          scrollTo(section === "ContactSection" ? contactRef : "");
         }}
       />
-      <SectionOne sectionRef={aboutUsRef} />
+      <AboutUs
+        sectionRef={aboutUsRef}
+        scrollToSection={(section) => {
+          scrollTo(section === "ServicesSection" ? servicesRef : "");
+        }}
+      />
+      <SectionOne
+        scrollToSection={(section) => {
+          scrollTo(section === "ContactSection" ? contactRef : "");
+        }}
+      />
+      <ServicesSection
+        sectionRef={servicesRef}
+        scrollToSection={(section) => {
+          scrollTo(section === "ContactSection" ? contactRef : "");
+        }}
+      />
       <SectionTwo />
-      <SectionThree sectionRef={servicesRef} />
-      <SectionFour />
-      <SectionFive />
       <Customers />
-      <Contact sectionRef={contactRef} />
-      <Footer />
+      <ContactSection sectionRef={contactRef} />
+      <Footer
+        scrollToSection={(section) => {
+          scrollTo(section === "AboutUsSection" ? aboutUsRef : "");
+          scrollTo(section === "ServicesSection" ? servicesRef : "");
+        }}
+      />
     </>
   );
 }

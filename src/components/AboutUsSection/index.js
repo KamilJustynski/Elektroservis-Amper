@@ -11,8 +11,7 @@ import {
 } from "./styled";
 import Picture from "./image.png";
 
-
-export const SectionOne = ({sectionRef}) => {
+export const AboutUs = ({ sectionRef, scrollToSection }) => {
   return (
     <Container ref={sectionRef}>
       <DescriptionWrapper>
@@ -32,7 +31,7 @@ export const SectionOne = ({sectionRef}) => {
           i usług wysokiej jakości, które pozwalają na optymalizację ich działań
           i zapewnienie niezawodności wykonanych systemów.
         </Description>
-        <Services>
+        <Services onClick={() => scrollToSection("ServicesSection")}>
           <span>Nasze usługi</span>
         </Services>
       </DescriptionWrapper>

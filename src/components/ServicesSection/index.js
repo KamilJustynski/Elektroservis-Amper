@@ -11,7 +11,7 @@ import {
   FlexWrapper,
 } from "./styled";
 
-export const SectionThree = ({ sectionRef }) => (
+export const ServicesSection = ({ sectionRef, scrollToSection }) => (
   <Container ref={sectionRef}>
     <Wrapper>
       <Name>Pomiary</Name>
@@ -21,7 +21,7 @@ export const SectionThree = ({ sectionRef }) => (
         narzędzia niezbędne do osiągnięcia doskonałych wyników w swoich
         projektach.
       </Article>
-      <Button>
+      <Button onClick={() => scrollToSection("ContactSection")}>
         <span>Skontaktuj się z nami</span>
       </Button>
     </Wrapper>

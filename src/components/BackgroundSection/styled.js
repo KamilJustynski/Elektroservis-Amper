@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as ellipse } from "./ellipse.svg";
+import backgroundImage from "./background.png"
 
 export const Container = styled.div`
   display: flex;
@@ -7,7 +8,7 @@ export const Container = styled.div`
   gap: 40px;
   justify-content: center;
   align-items: center;
-  background-image: url("https://s3-alpha-sig.figma.com/img/d4cd/ece7/2b9610d9d826a673fec38f8971096293?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QIpYFEi48JlCTZ3ow6ic3GyDSSZXSb~pWFBMB9r6792YUjkBa633H49g-aTYNll0xukXpdkmdH7TQ0fRjqmpKiPGYb3pdAcINHt7osplApveRzBCzDoNytOJsXkXoKqBfM7SwNOkieNa-uYNt0jjrQ8hVAwpugPvK-~~Wz4rENM9rtPFgbJ0EVR2beIMQ96cI6bwDiCo1CEchm~rbwCKHVDIXXid8qnw219rVh34IyhFSdetoQ5HNzpwUbfaeFTat1eafcPjdcPWFUo40BaK1tHCcfTrf~y1mSBYj7yIvOUHjNEKXc4LlAOzEjRvGjSVC3G3IscjkGwhfoZQ5V2Vqg__");
+  background-image: url(${backgroundImage});
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -38,7 +39,7 @@ export const SecondText = styled.h2`
   text-align: center;
   font-size: 24px;
   font-weight: 400;
-
+  text-shadow: 5px 5px 20px black,-5px -5px 20px black,-5px 5px 20px black,5px -5px 20px black;
   @media (max-width: 850px) {
     font-size: 16px;
   }
@@ -55,7 +56,7 @@ export const Button = styled.button`
   color: ${({ theme }) => theme.colors.white};
   font-size: 24px;
   font-weight: 400;
-  border: none;
+  border:2px solid white;
   cursor: pointer;
   position: relative;
   overflow: hidden;

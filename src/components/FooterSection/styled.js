@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { ReactComponent as facebook } from "./facebook.svg";
 import { ReactComponent as instagram } from "./instagram.svg";
 
@@ -139,6 +139,20 @@ export const Wrapper = styled.div`
 
   @media (max-width: 660px) {
     gap: 40px;
+  }
+`;
+export const Separator = styled.div`
+  color:white;
+  font-size:1.3rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-direction: column;
+  width: 100%;
+  padding-top:40px;
+  @media (max-width: 850px) {
+    justify-content: center;
+    gap: 18px;
   }
 `;
 

@@ -10,23 +10,23 @@ import {
 export const Background = ({ scrollToSection }) => (
   <Container>
     <MainText>
-      Witaj w Światowej
+    Zobacz co oferujemy w
       <br />
-      Klasie Elektryki i IT
+     zakresie elektryki,IT i nie tylko
     </MainText>
     <SecondText>
       Jesteśmy Twoim zaufanym partnerem w dziedzinie
       <br /> pomiarów elektrycznych, instalacji elektrycznych, pomiary
       <br /> IT i instalacji IT.
     </SecondText>
-    <Button onClick={() => scrollToSection("Contact")}>
+    <Button onClick={() => scrollToSection("ContactSection")}>
       <span>Skontaktuj sie z nami</span>
     </Button>
     <Wrapper>
       <Ellipse />
-      <Ellipse />
-      <Ellipse />
-      <Ellipse />
+      {/* <Ellipse /> */}
+      {/* <Ellipse /> */}
+      {/* <Ellipse /> */}
     </Wrapper>
   </Container>
 );

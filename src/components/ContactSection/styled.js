@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { ReactComponent as handset } from "./handset.svg";
 import { ReactComponent as envelope } from "./envelope.svg";
 
@@ -42,11 +42,11 @@ export const WrapperLeft = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 64px;
+  gap: 20px;
   width: 100%;
 
   @media (max-width: 850px) {
-    gap: 50px;
+    gap: 15px;
   }
 `;
 
@@ -54,34 +54,11 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.black};
   font-size: 48px;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 10%;
-    bottom: -10px;
-    width: 108px;
-    height: 2px;
-    background-color: ${({ theme }) => theme.colors.black};
-    transform: translateX(-50%);
-  }
 
   @media (max-width: 1200px) {
     font-size: 38px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 18%;
-      bottom: -10px;
-      width: 108px;
-      height: 2px;
-      background-color: ${({ theme }) => theme.colors.black};
-      transform: translateX(-50%);
-    }
   }
 
   @media (max-width: 540px) {
@@ -201,7 +178,7 @@ export const Email = styled.a`
   }
 `;
 
-export const WrapperRight = styled.div`
+export const WrapperRight = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -214,6 +191,7 @@ export const YourEmail = styled.input`
   height: 37px;
   background-color: ${({ theme }) => theme.colors.solitude};
   border: none;
+  padding: 10px 10px;
   border-bottom: solid 1px;
 
   @media (max-width: 1200px) {
@@ -237,9 +215,10 @@ export const YourEmail = styled.input`
   }
 `;
 
-export const Message = styled.input`
+export const Message = styled.textarea`
   width: 500px;
   height: 140px;
+  padding: 10px 10px;
   background-color: ${({ theme }) => theme.colors.solitude};
   border: 1px solid;
 

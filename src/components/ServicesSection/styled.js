@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { ReactComponent as polygon } from "./polygon.svg";
 
 export const Container = styled.div`
@@ -40,7 +40,8 @@ export const GridWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  align-items: flex-start;
+  align-items: center;
+
   row-gap: 40px;
   column-gap: 50px;
 
@@ -123,9 +124,8 @@ export const Wrapper = styled.div`
 export const Name = styled.h1`
   color: ${({ theme }) => theme.colors.black};
   font-size: 48px;
-  font-weight: 400;
+  font-weight: 500;
   font-style: italic;
-  position: relative;
   flex-shrink: 0;
   margin: 0;
 
@@ -135,17 +135,6 @@ export const Name = styled.h1`
 
   @media (max-width: 850px) {
     font-size: 32px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 27%;
-    bottom: -10px;
-    width: 108px;
-    height: 2px;
-    background-color: ${({ theme }) => theme.colors.sunglow};
-    transform: translateX(-50%);
   }
 `;
 
